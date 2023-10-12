@@ -128,15 +128,15 @@ main {
 #imgWillHere{
   width:49%;
   height:100%;
-  background-color: cadetblue;
+  background-color:#c4c4c4;
 }
 #page01Info {
   width: 50%;
   height: 100%;
   padding: 10px;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
 }
-/* #page01Info::-webkit-scrollbar {
+#page01Info::-webkit-scrollbar {
   width: 5px;
 }
 #page01Info::-webkit-scrollbar-thumb {
@@ -146,7 +146,7 @@ main {
 #page01Info::-webkit-scrollbar-track {
   border-radius: 25px;
   background-color: #ebebeb;
-} */
+}
 #infoText {
   background-color: #ebebeb;
   height: 150px;
@@ -284,6 +284,10 @@ main {
   border-bottom: 2px solid #151515;
   position: relative;
 }
+#pjtList > ul > li > span{
+  font-size:60px;
+  padding:5px;
+}
 #pjtList > ul > li:hover, .gradation{
   background: linear-gradient(to left, #151515, #1515153b);
   color: #ffffff;
@@ -372,3 +376,152 @@ main {
   font-size: 24em;
 }
 /* Page02 끝  /////////// Page03 시작 */
+#page03 {
+  padding: 10px 30px;
+}
+#page03In {
+  margin-top: 100px;
+  padding: 40px 40px;
+  height: 900px;
+  border: 1px solid #151515;
+  border-bottom: none;
+  border-radius: 100px 100px 0px 0px;
+  color: #151515;
+  position: relative;
+  display: flex;
+}
+#page03In h1 {
+  text-align: right;
+  font-size: 6em;
+  font-weight: 100;
+  display: inline-block;
+}
+#page03In h1:nth-child(2) {
+  position: absolute;
+  right: -8%;
+  bottom: 30%;
+  transform: rotate(90deg);
+}
+#page03In h1 span {
+  border-radius: 100px;
+  color: white;
+  background-color: #151515;
+  padding: 0px 40px;
+  position: absolute;
+  bottom: 50%;
+  right: 15%;
+}
+#page03In div {
+  display: inline-block;
+}
+#innerSns span,
+#innerDetail span,
+#innerBanner span {
+  border: 1px solid #151515;
+  border-radius: 100px;
+  font-size: 40px;
+  padding: 0px 20px;
+  margin: 0px 10px;
+}
+#snsContents span,
+#detailContents span,
+#bannerContents span {
+  border: none;
+  border-radius: 0;
+  font-size: none;
+  padding: 0px;
+  margin: 0px;
+}
+#innerLeft {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 5px;
+}
+#innerSns {
+  width: 100%;
+  height: 40%;
+  border-left: 3px solid #151515; 
+}
+#innerDetail {
+  width: 100%;
+  height: 50%;
+  margin: 20px 0px;
+  border-left: 3px solid #151515;
+}
+#innerBanner {
+  width: 49%;
+  height: 30%;
+  border-bottom: 3px solid #151515;
+  margin: 5px; /*상단 가로정렬 위해*/
+}
+#snsContents {
+  width: 100%;
+  height: 80%;
+  margin-top:10px;
+  text-align: center;
+  position: relative;
+}
+#detailContents {
+  width: 100%;
+  height: 80%;
+  margin-top:10px;
+  text-align: center;
+  position: relative;
+}
+#bannerContents {
+  width: 100%;
+  height: 70%;
+  margin-top:10px;
+  text-align: center;
+  position: relative;
+}
+#snsContents span:hover,
+#detailContents span:hover,
+#bannerContents span:hover {
+  background-color: #151515;
+  color: #ffffff;
+  border-radius: 20px;
+}
+#snsContents span:first-child,
+#detailContents span:first-child,
+#bannerContents span:first-child {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#snsContents span:last-child,
+#detailContents span:last-child,
+#bannerContents span:last-child {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#snsItemBox, #detailItemBox, #bannerItemBox{
+  border:1px solid #151515;
+  width:90%;
+  height:100%;
+  overflow: hidden;
+}
+#snsItemBox{
+  display:flex;
+  flex-flow:row nowrap;
+}
+#snsItem1,#snsItem2{
+  display: inline-block;
+  border:1px solid #151515;
+  width:250px;
+  height:250px;
+  margin:0px 20px;
+}
+#page03IndexNum {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  padding: 0;
+  font-size: 24em;
+}

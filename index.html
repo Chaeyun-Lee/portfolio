@@ -1,93 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CHAE-YUN LEE</title>
+    <link rel="icon" href="img/FaviconBulb.ico">
     <link rel="stylesheet" href="css/p0_p2css.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <style>
-      #page03 {
-        padding: 10px 30px;
-      }
-      #page03In {
-        margin-top: 100px;
-        padding: 40px 40px;
-        height: 900px;
-        border: 1px solid #151515;
-        border-bottom: none;
-        border-radius: 100px 100px 0px 0px;
-        color: #151515;
-        position: relative;
-        display: flex;
-      }
-      #page03In h1 {
-        text-align: right;
-        font-size: 6em;
-        font-weight: 100;
-        display: inline-block;
-      }
-      #page03In h1:nth-child(2) {
-        position: absolute;
-        right: -8%;
-        bottom: 30%;
-        transform: rotate(90deg);
-      }
-      #page03In h1 span {
-        border-radius: 100px;
-        color: white;
-        background-color: #151515;
-        padding: 0px 40px;
-        position: absolute;
-        bottom: 50%;
-        right: 15%;
-      }
-      #page03In div {
-        display: inline-block;
-        /* border: 1px solid black; */
-      }
-      #innerSns span,
-      #innerDetail span,
-      #innerBanner span {
-        border: 1px solid #151515;
-        border-radius: 100px;
-        font-size: 40px;
-        padding: 0px 20px;
-        margin: 0px 10px;
-      }
-      #innerLeft {
-        height: 100%;
-        width: 50%;
-        display: flex;
-        flex-flow: column wrap;
-        /* border-right: 2px solid black; */
-        padding: 5px;
-      }
-      #innerSns {
-        width: 100%;
-        height: 40%;
-        border-left: 3px solid black;
-      }
-      #innerDetail {
-        width: 100%;
-        height: 50%;
-        margin: 20px 0px;
-        border-left: 3px solid black;
-      }
-      #innerBanner {
-        width: 49%;
-        height: 30%;
-        border-bottom: 3px solid black;
-        margin: 5px;
-      }
-      #page03IndexNum {
-        display: inline-block;
-        position: absolute;
-        bottom: 0;
-        right: 10%;
-        padding: 0;
-        font-size: 24em;
-      }
+      
     </style>
   </head>
   <body>
@@ -148,9 +73,15 @@
                     </ul>
                     <p>자격증</p>
                     <ul>
+                      <li>TOEIC 835</li>
                       <li>2종 보통 운전면허</li>
                       <li>웹디자인기능사 필기</li>
-                      <li>TOEIC 835</li>
+                    </ul>
+                    <p>취미/관심</p>
+                    <ul>
+                      <li>프리다이빙</li>
+                      <li>문화/예술/패션 콘텐츠 읽기</li>
+                      <li>음악 듣기</li>
                     </ul>
                   </div>
                 </div>
@@ -201,7 +132,9 @@
               <div id="pjtList">
                 <ul>
                   <li class="webList">
-                    <span class="material-symbols-outlined"> arrow_down </span>
+                    <span class="material-symbols-outlined">
+                      arrow_downward
+                    </span>
                     Project 01
                     <ul class="pjtDetails">
                       <li class="pjtDetail">
@@ -230,7 +163,9 @@
                     </ul>
                   </li>
                   <li class="webList">
-                    <span class="material-symbols-outlined"> arrow_down </span>
+                    <span class="material-symbols-outlined">
+                      arrow_downward
+                    </span>
                     Project 02
                     <ul class="pjtDetails">
                       <li class="pjtDetail">
@@ -259,7 +194,9 @@
                     </ul>
                   </li>
                   <li class="webList">
-                    <span class="material-symbols-outlined"> arrow_down </span>
+                    <span class="material-symbols-outlined">
+                      arrow_downward
+                    </span>
                     Project 03
                     <ul class="pjtDetails">
                       <li class="pjtDetail">
@@ -288,7 +225,9 @@
                     </ul>
                   </li>
                   <li class="webList">
-                    <span class="material-symbols-outlined"> arrow_down </span>
+                    <span class="material-symbols-outlined">
+                      arrow_downward
+                    </span>
                     Project 04
                     <ul class="pjtDetails">
                       <li class="pjtDetail">
@@ -330,16 +269,31 @@
             <div id="innerLeft">
               <div id="innerSns">
                 <span>SNS</span>
-                <div id="snsContents"></div>
+                <div id="snsContents">
+                  <span class="material-symbols-outlined"> chevron_left </span>
+                  <div id="snsItemBox">
+                    <div id="snsItem1"></div>
+                    <div id="snsItem2"></div>
+                  </div>
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </div>
               </div>
               <div id="innerDetail">
                 <span>Detail View</span>
-                <div id="detailContents"></div>
+                <div id="detailContents">
+                  <span class="material-symbols-outlined"> chevron_left </span>
+                  <div id="detailItemBox"></div>
+                  <span class="material-symbols-outlined"> chevron_right </span>
+                </div>
               </div>
             </div>
             <div id="innerBanner">
-              <span>BANNER</span>
-              <div id="bannerContents"></div>
+              <span>Banner</span>
+              <div id="bannerContents">
+                <span class="material-symbols-outlined"> chevron_left </span>
+                <div id="bannerItemBox"></div>
+                <span class="material-symbols-outlined"> chevron_right </span>
+              </div>
             </div>
             <p id="page03IndexNum">03</p>
           </div>
@@ -363,41 +317,39 @@
     });
   </script>
   <script>
-        //jquery
-        $(function () {
-          $(".webList").each(function () {
-            $(this).on("click", function () {
-              $(this).children(".pjtDetails").slideToggle(300, "linear");
-              $(this).siblings().toggle("hideList");
-              $(this).toggleClass("gradation");
-              // $(this).children('span').toggle($(this).children('span').text('arrow_up'))
-              //화살표 방향 왔다갔다가 안됨.바뀌고 다시 안돌아옴
-            });
-          })
-        });
+    //jquery
 
-          const menuBtns = $(".menuBtns");
-          $(window).scroll(function () {
-            const scrollNum = $(window).scrollTop();
-            console.log(scrollNum);
-            if ((scrollNum == 0) | (scrollNum <= 600)) {
-              $(".menuBtns:eq(0)").addClass("actives");
-              $(".menuBtns:eq(0)").siblings().removeClass("actives");
-            }
-            else if(
-              (scrollNum >= 600) | (scrollNum < 1600)) {
-                $(".menuBtns:eq(1)").addClass("actives");
-                $(".menuBtns:eq(1)").siblings().removeClass("actives");
-              }
-              else if ((scrollNum >= 1600) | (scrollNum < 2600)) {
-                  $(".menuBtns:eq(2)").addClass("actives");
-                  $(".menuBtns:eq(2)").siblings().removeClass("actives");
-                }
-               else{
-                    $(".menuBtns:eq(3)").addClass("actives");
-                    $(".menuBtns:eq(3)").siblings().removeClass("actives");
-                  }
-                }
-          );
+    // scroll event - Fixed menu li에 actives 클래스 추가
+    const menuBtns = $(".menuBtns");
+    $(window).scroll(function () {
+      const scrollNum = $(window).scrollTop();
+      console.log(scrollNum);
+      if (scrollNum <= 700) {
+        $(".menuBtns:eq(0)").addClass("actives");
+        $(".menuBtns:eq(0)").siblings().removeClass("actives");
+      } else if (scrollNum >= 700 && scrollNum < 1600) {
+        $(".menuBtns:eq(1)").addClass("actives");
+        $(".menuBtns:eq(1)").siblings().removeClass("actives");
+      } else if (scrollNum >= 1600 && scrollNum < 2600) {
+        $(".menuBtns:eq(2)").addClass("actives");
+        $(".menuBtns:eq(2)").siblings().removeClass("actives");
+      } else if (scrollNum > 2600) {
+        $(".menuBtns:eq(3)").addClass("actives");
+        $(".menuBtns:eq(3)").siblings().removeClass("actives");
+      }
+    });
+
+    //Page02 프로젝트 toggle
+    $(function () {
+      $(".webList").each(function () {
+        $(this).on("click", function () {
+          $(this).children(".pjtDetails").slideToggle(300, "linear");
+          $(this).siblings().toggle("hideList");
+          $(this).toggleClass("gradation");
+          // $(this).children('span').toggle($(this).children('span').text('arrow_up'))
+          //화살표 방향 왔다갔다가 안됨.바뀌고 다시 안돌아옴
+        });
+      });
+    });
   </script>
 </html>
