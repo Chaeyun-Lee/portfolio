@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/p0_p2css.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      #page03 {
+        padding: 10px 30px;
+      }
+      #page03In {
+        margin-top: 100px;
+        padding: 40px 40px;
+        height: 900px;
+        border: 1px solid #151515;
+        border-bottom: none;
+        border-radius: 100px 100px 0px 0px;
+        color: #151515;
+        position: relative;
+        display: flex;
+      }
+      #page03In h1 {
+        text-align: right;
+        font-size: 6em;
+        font-weight: 100;
+        display: inline-block;
+      }
+      #page03In h1:nth-child(2) {
+        position: absolute;
+        right: -8%;
+        bottom: 30%;
+        transform: rotate(90deg);
+      }
+      #page03In h1 span {
+        border-radius: 100px;
+        color: white;
+        background-color: #151515;
+        padding: 0px 40px;
+        position: absolute;
+        bottom: 50%;
+        right: 15%;
+      }
+      #page03In div {
+        display: inline-block;
+        /* border: 1px solid black; */
+      }
+      #innerSns span,
+      #innerDetail span,
+      #innerBanner span {
+        border: 1px solid #151515;
+        border-radius: 100px;
+        font-size: 40px;
+        padding: 0px 20px;
+        margin: 0px 10px;
+      }
+      #innerLeft {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-flow: column wrap;
+        /* border-right: 2px solid black; */
+        padding: 5px;
+      }
+      #innerSns {
+        width: 100%;
+        height: 40%;
+        border-left: 3px solid black;
+      }
+      #innerDetail {
+        width: 100%;
+        height: 50%;
+        margin: 20px 0px;
+        border-left: 3px solid black;
+      }
+      #innerBanner {
+        width: 49%;
+        height: 30%;
+        border-bottom: 3px solid black;
+        margin: 5px;
+      }
+      #page03IndexNum {
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        padding: 0;
+        font-size: 24em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header id="page00">
+        <img src="img/indexBackgroundNewVer.jpg" alt="" id="backgroundImg" />
+        <img src="img/Scroll DOWN.png" id="scrollDown" />
+        <nav>
+          <ul id="mainPagebtn">
+            <a href="#page00" class="menuBtns"><li>00</li></a>
+            <a href="#page01" class="menuBtns"><li>01</li></a>
+            <a href="#page02" class="menuBtns"><li>02</li></a>
+            <a href="#page03" class="menuBtns"><li>03</li></a>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="page01">
+          <div id="page01In">
+            <h1>01_About Me</h1>
+            <div id="innerPage01">
+              <section id="page01Left">
+                <div id="imgWillHere">
+                  <img src="" alt="" />
+                </div>
+                <div id="page01Info">
+                  <div id="infoText">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Praesentium placeat quisquam vero at, repellat fugiat ex.
+                    </p>
+                  </div>
+                  <h2>이채윤</h2>
+                  <p>2000 . 08 . 11</p>
+                  <p>경기도 고양시 거주</p>
+                  <p>lycheey@naver.com</p>
+                  <ul id="personalKw">
+                    <li>#책임감</li>
+                    <li>#효율성</li>
+                    <li>#신뢰성</li>
+                    <li>#도전정신</li>
+                  </ul>
+                  <div id="infoSkill">
+                    <p>다루는 기술</p>
+                    <ul>
+                      <li class="Lv3">PHOTOSHOP</li>
+                      <li class="Lv2">ILLUSTRATOR</li>
+                      <li class="Lv3">HTML5</li>
+                      <li class="Lv3">CSS3</li>
+                      <li class="Lv2">Javascript</li>
+                      <li class="Lv2">jQeury</li>
+                      <li class="Lv1">REACT</li>
+                    </ul>
+                    <p>언어</p>
+                    <ul>
+                      <li>한국어</li>
+                      <li>영어 | 중상</li>
+                    </ul>
+                    <p>자격증</p>
+                    <ul>
+                      <li>2종 보통 운전면허</li>
+                      <li>웹디자인기능사 필기</li>
+                      <li>TOEIC 835</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section id="page01Right">
+                <div id="page01Edu">
+                  <div id="eduTitle">학력 및 교육</div>
+                  <div id="eduText">
+                    <p>
+                      <span>2023.05 ~ 2023.11</span><br />UX/UI
+                      웹디자인&웹퍼블리셔 실무자 양성과정 수료
+                    </p>
+                    <p>
+                      <span>2022.02</span><br />한양여자대학교 패션디자인과 졸업
+                    </p>
+                    <p><span>2019.02</span><br />행신고등학교 졸업</p>
+                  </div>
+                </div>
+                <div id="page01Work">
+                  <div id="workTitle">
+                    <p>이력</p>
+                  </div>
+                  <div id="workText">
+                    <p>
+                      <span>2020.12 ~ 2023.02 (2년 3개월)</span><br />풋락커
+                      코리아 | 슈퍼바이저<span>(주 40시간)</span><br />
+                      <span
+                        >PT->FT->SV 진급 / 홍대, 신촌, 신사가로수길 지점 근무<br />전체적인
+                        매장관리 및 고객응대
+                      </span>
+                    </p>
+                    <p>
+                      <span>2019.02 ~ 2020.08 (1년 7개월)</span><br />자연별곡 |
+                      파트타임<span>(주 16시간)</span><br />
+                      <span>홀/샐러드바 관리 및 캐셔 고객응대 </span>
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <!-- Page01 끝 ////// Page02 시작 -->
+        <div id="page02">
+          <div id="page02In">
+            <h1>My <br /><span>Web</span> <br />Projects</h1>
+            <section id="page02Inner">
+              <div id="pjtList">
+                <ul>
+                  <li class="webList">
+                    <span class="material-symbols-outlined"> arrow_down </span>
+                    Project 01
+                    <ul class="pjtDetails">
+                      <li class="pjtDetail">
+                        <div class="webPjtPhoto">
+                          <img src="https://placehold.it/500X600" alt="" />
+                        </div>
+                        <div class="webPjtText">
+                          <h2>Project Title</h2>
+                          <p>Project 1-line introduce.</p>
+                          <br />
+                          <div class="webInfoTitle">
+                            <p>제작기간</p>
+                            <p>기여도</p>
+                            <p>제작페이지</p>
+                            <p>사용툴</p>
+                          </div>
+                          <div class="webInfoText">
+                            <p>n시간</p>
+                            <p>100% (개인)</p>
+                            <p>Main, Sub1, Sub2, Log-in</p>
+                            <p>HTML5, CSS3, Javascript, jQeury</p>
+                          </div>
+                          <button>완성 페이지</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="webList">
+                    <span class="material-symbols-outlined"> arrow_down </span>
+                    Project 02
+                    <ul class="pjtDetails">
+                      <li class="pjtDetail">
+                        <div class="webPjtPhoto">
+                          <img src="https://placehold.it/500X600" alt="" />
+                        </div>
+                        <div class="webPjtText">
+                          <h2>Project Title</h2>
+                          <p>Project 1-line introduce.</p>
+                          <br />
+                          <div class="webInfoTitle">
+                            <p>제작기간</p>
+                            <p>기여도</p>
+                            <p>제작페이지</p>
+                            <p>사용툴</p>
+                          </div>
+                          <div class="webInfoText">
+                            <p>n시간</p>
+                            <p>100% (개인)</p>
+                            <p>Main, Sub1, Sub2, Log-in</p>
+                            <p>HTML5, CSS3, Javascript, jQeury</p>
+                          </div>
+                          <button>완성 페이지</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="webList">
+                    <span class="material-symbols-outlined"> arrow_down </span>
+                    Project 03
+                    <ul class="pjtDetails">
+                      <li class="pjtDetail">
+                        <div class="webPjtPhoto">
+                          <img src="https://placehold.it/500X600" alt="" />
+                        </div>
+                        <div class="webPjtText">
+                          <h2>Project Title</h2>
+                          <p>Project 1-line introduce.</p>
+                          <br />
+                          <div class="webInfoTitle">
+                            <p>제작기간</p>
+                            <p>기여도</p>
+                            <p>제작페이지</p>
+                            <p>사용툴</p>
+                          </div>
+                          <div class="webInfoText">
+                            <p>n시간</p>
+                            <p>100% (개인)</p>
+                            <p>Main, Sub1, Sub2, Log-in</p>
+                            <p>HTML5, CSS3, Javascript, jQeury</p>
+                          </div>
+                          <button>완성 페이지</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="webList">
+                    <span class="material-symbols-outlined"> arrow_down </span>
+                    Project 04
+                    <ul class="pjtDetails">
+                      <li class="pjtDetail">
+                        <div class="webPjtPhoto">
+                          <img src="https://placehold.it/500X600" alt="" />
+                        </div>
+                        <div class="webPjtText">
+                          <h2>Project Title</h2>
+                          <p>Project 1-line introduce.</p>
+                          <br />
+                          <div class="webInfoTitle">
+                            <p>제작기간</p>
+                            <p>기여도</p>
+                            <p>제작페이지</p>
+                            <p>사용툴</p>
+                          </div>
+                          <div class="webInfoText">
+                            <p>n시간</p>
+                            <p>100% (개인)</p>
+                            <p>Main, Sub1, Sub2, Log-in</p>
+                            <p>HTML5, CSS3, Javascript, jQeury</p>
+                          </div>
+                          <button>완성 페이지</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <p id="page02IndexNum">02</p>
+          </div>
+        </div>
+        <!-- Page02 끝 //////////// Page03 시작 -->
+        <div id="page03">
+          <div id="page03In">
+            <h1><span>Design</span></h1>
+            <h1>My Projects</h1>
+            <div id="innerLeft">
+              <div id="innerSns">
+                <span>SNS</span>
+                <div id="snsContents"></div>
+              </div>
+              <div id="innerDetail">
+                <span>Detail View</span>
+                <div id="detailContents"></div>
+              </div>
+            </div>
+            <div id="innerBanner">
+              <span>BANNER</span>
+              <div id="bannerContents"></div>
+            </div>
+            <p id="page03IndexNum">03</p>
+          </div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+  <script>
+    //scroll event
+    const headerMenu = document.querySelector("#mainPagebtn");
+    const mainPage = document.querySelector("#page01");
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 800) {
+        headerMenu.style.position = "fixed";
+        headerMenu.style.top = "5%";
+      } else if (window.scrollY <= 800) {
+        headerMenu.style.position = "absolute";
+        headerMenu.style.top = "85%";
+      }
+    });
+  </script>
+  <script>
+        //jquery
+        $(function () {
+          $(".webList").each(function () {
+            $(this).on("click", function () {
+              $(this).children(".pjtDetails").slideToggle(300, "linear");
+              $(this).siblings().toggle("hideList");
+              $(this).toggleClass("gradation");
+              // $(this).children('span').toggle($(this).children('span').text('arrow_up'))
+              //화살표 방향 왔다갔다가 안됨.바뀌고 다시 안돌아옴
+            });
+          })
+        });
+
+          const menuBtns = $(".menuBtns");
+          $(window).scroll(function () {
+            const scrollNum = $(window).scrollTop();
+            console.log(scrollNum);
+            if ((scrollNum == 0) | (scrollNum <= 600)) {
+              $(".menuBtns:eq(0)").addClass("actives");
+              $(".menuBtns:eq(0)").siblings().removeClass("actives");
+            }
+            else if(
+              (scrollNum >= 600) | (scrollNum < 1000)) {
+                $(".menuBtns:eq(1)").addClass("actives");
+                $(".menuBtns:eq(1)").siblings().removeClass("actives");
+              }
+              else if ((scrollNum >= 1000) | (scrollNum < 2600)) {
+                  $(".menuBtns:eq(2)").addClass("actives");
+                  $(".menuBtns:eq(2)").siblings().removeClass("actives");
+                }
+               else{
+                    $(".menuBtns:eq(3)").addClass("actives");
+                    $(".menuBtns:eq(3)").siblings().removeClass("actives");
+                  }
+                }
+          );
+  </script>
+</html>

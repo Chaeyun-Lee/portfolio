@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Noto+Sans+KR&display=swap");
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 12.5px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #151515ad;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 25px;
+  background-color: #ebebeb;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+}
+#container {
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  width: 100vw;
+  position: relative;
+}
+#backgroundImg {
+  width: 100vw;
+}
+#scrollDown {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: indexEffect 1s infinite alternate linear;
+}
+@keyframes indexEffect {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+nav ul {
+  list-style-type: none;
+  height: fit-content;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 60%;
+  display: flex;
+  flex:row nowrap;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+nav ul a {
+  display: inline-block;
+  border-radius: 50px;
+  height: fit-content;
+}
+nav li {
+  display: inline-block;
+  border: 1px solid #151515;
+  border-radius: 50px;
+  width: 250px;
+  margin: 0 10px;
+  padding-left: 20px;
+  font-size: 2em;
+  transition: 0.5s;
+  cursor: pointer;
+}
+nav li:hover,
+nav li:active, .actives{
+  background-color: #151515;
+  color: white;
+  width: 400px;
+  transition: 0.5s;
+}
+/* header 끝 ///////// Main 시작 */
+main {
+  padding: 0px 5%;
+}
+#page01, #page02, #page03{
+  min-height:100vh;
+}
+#page01 {
+  padding: 10px 30px;
+}
+#page01In {
+  margin-top: 100px;
+  padding: 20px 40px;
+  height: 900px;
+  border: 1px solid #151515;
+  border-bottom: none;
+  border-radius: 100px 100px 0px 0px;
+  color: #151515;
+}
+#page01In h1 {
+  font-size: 6em;
+  font-weight: 100;
+}
+#innerPage01 {
+  display: flex;
+  font-family: "Noto Sans KR", sans-serif;
+}
+#page01Left {
+  display: flex;
+  width: 48%;
+  height: 700px;
+  display: flex;
+}
+#imgWillHere{
+  width:49%;
+  height:100%;
+  background-color: cadetblue;
+}
+#page01Info {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  /* overflow-y: scroll; */
+}
+/* #page01Info::-webkit-scrollbar {
+  width: 5px;
+}
+#page01Info::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #151515ad;
+}
+#page01Info::-webkit-scrollbar-track {
+  border-radius: 25px;
+  background-color: #ebebeb;
+} */
+#infoText {
+  background-color: #ebebeb;
+  height: 150px;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+#personalKw li{
+  display: inline-block;
+  border-radius:30px;
+  padding:0px 10px;
+  border: 1px solid #151515;
+  margin:5px 0px;
+}
+#infoSkill p {
+  text-align: right;
+  font-size: 22px;
+  font-weight: bold;
+}
+#infoSkill ul {
+  text-align: right;
+  margin: 10px 0px;
+}
+#infoSkill li {
+  display: inline-block;
+  border: 1px solid #151515;
+  padding: 0px 10px;
+  margin: 5px 0px;
+  border-radius: 30px;
+}
+#infoSkill .Lv3 {
+  color: #ffffff;
+  background-color: #151515;
+}
+#infoSkill .Lv2 {
+  color: #ffffff;
+  background-color: #646464;
+}
+#infoSkill .Lv1 {
+  color: #ffffff;
+  background-color: #c4c4c4;
+}
+#page01Right {
+  display: inline-block;
+  width: 48%;
+  height: 700px;
+}
+#page01Edu,
+#page01Work {
+  /* border: 1px solid #151515; */
+  display: flex;
+  width: 100%;
+  height: 270px;
+  margin-bottom: 50px;
+}
+#eduTitle {
+  width: 40%;
+  padding: 10px;
+  text-align: right;
+  font-size: 22px;
+  font-weight: bold;
+}
+#eduText {
+  width: 60%;
+  padding: 30px 10px;
+  font-size: 18px;
+  border-left: 1px solid #151515;
+}
+#workTitle {
+  width: 40%;
+  padding: 10px;
+  text-align: right;
+  font-size: 22px;
+  font-weight: 900;
+}
+#workText {
+  width: 60%;
+  padding: 30px 10px;
+  font-size: 18px;
+  border-left: 1px solid #151515;
+}
+#eduText p,
+#workText p {
+  margin: 10px 0px;
+}
+#eduText span,
+#workText span {
+  font-size: smaller;
+}
+/* Page01 끝 /////// Page02 시작 */
+#page02 {
+  padding: 10px 30px;
+}
+#page02In {
+  margin-top: 100px;
+  padding: 20px 40px;
+  height: 900px;
+  border: 1px solid #151515;
+  border-bottom: none;
+  border-radius: 100px 100px 0px 0px;
+  color: #151515;
+  position:relative;
+  display: flex;
+}
+#page02In h1 {
+  width:27%;
+  font-size: 6em;
+  font-weight: 100;
+  display: inline-block;
+}
+#page02In h1 span {
+  border-radius: 100px;
+  color: white;
+  background-color: #151515;
+  padding: 0px 40px;
+}
+#page02Inner {
+  display: inline-block;
+  width: 70%;
+  height: 600px;
+  position: relative;
+}
+#pjtList > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+}
+#pjtList > ul > li {
+  width: 100%;
+  text-align: right;
+  font-size: 50px;
+  padding-right: 10px;
+  border-bottom: 2px solid #151515;
+  position: relative;
+}
+#pjtList > ul > li:hover, .gradation{
+  background: linear-gradient(to left, #151515, #1515153b);
+  color: #ffffff;
+  cursor: pointer;
+}
+#pjtList span {
+  position: absolute;
+  left: 0;
+}
+.pjtDetails {
+  position: absolute;
+  right:0;
+  width:100%;
+  text-align: center;
+  display: none;
+  color: #151515;
+  cursor: auto;
+  z-index: 50;
+}
+.pjtDetail {
+  width: 100%;
+  height: 700px;
+  padding: 10px;
+  border: 1px solid #151515;
+  border-radius: 50px 0px  ;
+  display: flex;
+  background-color: #ffffff;
+}
+.hideList {
+  display: none;
+}
+.pjtDetail div {
+  display: inline-block;
+}
+.webPjtPhoto {
+  width: 49%;
+  height: 100%;
+}
+.webPjtText {
+  font-family: "Noto Sans KR", sans-serif;
+  width: 49%;
+  height: auto;
+  padding: 15% 30px;
+  border-left: 2px solid #151515;
+  font-size: large;
+  text-align: left;
+  position: relative;
+}
+.webPjtText p {
+  margin: 10px 0px;
+}
+.webInfoTitle {
+  width: 20%;
+  font-weight: bold;
+  text-align: right;
+}
+.webInfoText {
+  padding: 0px 20px;
+  width: 75%;
+}
+.webPjtText button{
+  font-family: "Noto Sans KR", sans-serif;
+  width:150px;
+  padding:5px;
+  font-size:20px;
+  font-weight: bold;
+  color:#151515;
+  border:none;
+  border-bottom:3px solid #151515;
+  transition: 0.5s;
+  position:absolute;
+  right:4%;
+  bottom:25%;
+}
+.webPjtText button:hover{
+  background-color: #151515;
+  color:#ffffff;
+  transition: 0.5s;
+}
+#page02IndexNum{
+  display: inline-block;
+  position:absolute;
+  bottom:0;
+  right:0;
+  padding:50px;
+  font-size: 24em;
+}
+/* Page02 끝  /////////// Page03 시작 */
