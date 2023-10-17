@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0 auto;
+            padding:0;
+            box-sizing:border-box;
+            background-color: #ececec;
+        }
+        body{
+            position:relative;
+        }
+        #wrap{
+            max-width:1000px;
+            text-align:center;
+            margin:0 auto;
+            padding:30px;
+        }
+        #click{
+            padding:10px;
+            width:150px;
+            border:1px solid lightskyblue;
+            border-radius:30px;
+            background-color:aliceblue;
+            box-shadow: 2px 2px 3px 2px lightgray;
+        }
+        #click:hover{
+            cursor:pointer;
+            background-color: rgb(227, 242, 255);
+            transform: scale(1.1);
+            transition:0.3s;
+        }
+        dialog{
+            position:absolute;
+            top:50%;
+            padding:30px;
+            width:300px;
+            border: none;
+            border-radius:10px;
+        }
+        dialog::backdrop{
+            background-color: #ff9900;
+            opacity: 0.5;
+        }
+        form>button{
+            padding:5px;
+            margin:10px 3px;
+            border:2px solid gray;
+            border-radius: 5px;
+        }
+        form>button:hover{
+            cursor:pointer;
+            background-color: #ccc;
+            color:white;
+        }
+        #list{
+            padding:10px;
+        }
+        .items{
+            width:150px;
+            height:150px;
+            box-shadow: 2px 2px 3px 2px lightgrey;
+            background-color:#d9ebd6;
+            border-radius: 20px;
+            margin-top:30px;
+            transform: scale(1.1);
+            transition:all 0.3s ease-in-out;
+            opacity: 0.5;
+        }
+        .visible{
+            transform: scale(1);
+            transition:all 0.3s ease-in-out;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <button id="click">눌러보세요!</button>
+        <dialog id="hi">
+            Hello!
+            <form method="dialog">
+                <button value="close">
+                    Close
+                </button>
+                <button value="confirm">
+                    Confirm
+                </button>
+            </form>
+        </dialog>
+        <dialog id="nice">
+            Have a nice day!
+            <form method="dialog">
+                <button value="thankyou">Thank you!</button>
+            </form>
+        </dialog>
+        <div id="list">
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+        </div>
+    </div>
+</body>
+<script>
+    const btn =document.querySelector('button');
+    const dia1 = document.querySelector('#hi');
+    const dia2 = document.querySelector('#nice');
+
+    btn.addEventListener('click', () => {
+        dia1.showModal();
+    })
+
+    dia1.addEventListener('close', () => {
+        console.log(dia1.returnValue);
+        
+        if(dia1.returnValue=='confirm'){
+        dia2.showModal();
+    }
+    });
+
+    const items = document.querySelectorAll('.items');
+
+    const obsever = new IntersectionObserver(
+        (items) => {
+            items.forEach(function (items){
+                if(items.isIntersecting){
+                    items.target.classList.add('visible');
+                }
+                else{
+                    items.target.classList.remove('visible');
+                }
+            })
+    },
+    {
+        threshold: 0.3
+    }
+    );
+    items.forEach((items)=>
+        obsever.observe(items)); 
+
+</script>
+</html>
