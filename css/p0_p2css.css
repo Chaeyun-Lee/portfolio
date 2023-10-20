@@ -325,9 +325,21 @@ main {
 .webPjtPhoto {
   width: 49%;
   height: 100%;
+  overflow-x: hidden;
+}
+.webPjtPhoto::-webkit-scrollbar {
+  width: 5px;
+}
+.webPjtPhoto::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #151515ad;
+}
+.webPjtPhoto::-webkit-scrollbar-track {
+  border-radius: 25px;
+  background-color: #ebebeb;
 }
 .webPjtPhoto img {
-  width:00%;
+  width:100%;
 }
 .webPjtText {
   font-family: "Noto Sans KR", sans-serif;
