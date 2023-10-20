@@ -30,7 +30,7 @@
         </nav>
       </header>
       <main>
-        <div id="page01">
+        <div id="page01" class="pages">
           <div id="page01In">
             <h1>01_About Me</h1>
             <div id="innerPage01">
@@ -120,7 +120,7 @@
           </div>
         </div>
         <!-- Page01 끝 ////// Page02 시작 -->
-        <div id="page02">
+        <div id="page02" class="pages">
           <div id="page02In">
             <h1>My <br /><span>Web</span> <br />Projects</h1>
             <section id="page02Inner">
@@ -257,7 +257,7 @@
           </div>
         </div>
         <!-- Page02 끝 //////////// Page03 시작 -->
-        <div id="page03">
+        <div id="page03" class="pages">
           <div id="page03In">
             <h1><span>Design</span></h1>
             <h1>My Projects</h1>
@@ -273,11 +273,11 @@
                   <span class="material-symbols-outlined"> chevron_right </span>
                 </div>
               </div>
-              <div id="innerDetail">
-                <span>Detail View</span>
-                <div id="detailContents">
+              <div id="innerFullpage">
+                <span>Fullpage Cover</span>
+                <div id="fullpageContents">
                   <span class="material-symbols-outlined"> chevron_left </span>
-                  <div id="detailItemBox"></div>
+                  <div id="fullpageItemBox"></div>
                   <span class="material-symbols-outlined"> chevron_right </span>
                 </div>
               </div>
@@ -310,6 +310,26 @@
         headerMenu.style.top = "85%";
       }
     });
+
+    const pages = document.querySelectorAll('.pages');
+
+    const obsever = new IntersectionObserver(
+        (pages) => {
+            pages.forEach(function (pages){
+                if(pages.isIntersecting){
+                    pages.target.classList.add('visible');
+                }
+                else{
+                    pages.target.classList.remove('visible');
+                }
+            })
+    },
+    {
+        threshold: 0.3
+    }
+    );
+    pages.forEach((pages)=>
+        obsever.observe(pages)); 
   </script>
   <script>
     //jquery
