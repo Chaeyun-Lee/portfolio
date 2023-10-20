@@ -154,9 +154,6 @@ main {
   padding: 30px;
   margin-bottom: 20px;
 }
-#page01Info > p{
-  line-height:28px;
-}
 #personalKw li{
   display: inline-block;
   border-radius:30px;
@@ -168,7 +165,6 @@ main {
   text-align: right;
   font-size: 22px;
   font-weight: bold;
-  margin-top:40px;
 }
 #infoSkill ul {
   text-align: right;
@@ -181,6 +177,18 @@ main {
   margin: 5px 0px;
   border-radius: 30px;
 }
+#infoSkill .Lv3 {
+  color: #ffffff;
+  background-color: #151515;
+}
+#infoSkill .Lv2 {
+  color: #ffffff;
+  background-color: #646464;
+}
+#infoSkill .Lv1 {
+  color: #ffffff;
+  background-color: #c4c4c4;
+}
 #page01Right {
   display: inline-block;
   width: 48%;
@@ -191,11 +199,8 @@ main {
   /* border: 1px solid #151515; */
   display: flex;
   width: 100%;
-  height: 300px;
-  margin-bottom: 70px;
-}
-.period{
-  border-top:2px solid #ececec;
+  height: 270px;
+  margin-bottom: 50px;
 }
 #eduTitle {
   width: 40%;
@@ -206,10 +211,9 @@ main {
 }
 #eduText {
   width: 60%;
-  height:100%;
-  padding: 25px 10px;
+  padding: 30px 10px;
   font-size: 18px;
-  border-left: 2px solid #151515;
+  border-left: 1px solid #151515;
 }
 #workTitle {
   width: 40%;
@@ -220,14 +224,13 @@ main {
 }
 #workText {
   width: 60%;
-  height:100%;
-  padding: 25px 10px;
+  padding: 30px 10px;
   font-size: 18px;
-  border-left: 2px solid #151515;
+  border-left: 1px solid #151515;
 }
 #eduText p,
 #workText p {
-  margin: 30px 0px;
+  margin: 10px 0px;
 }
 #eduText span,
 #workText span {
@@ -323,6 +326,9 @@ main {
   width: 49%;
   height: 100%;
 }
+.webPjtPhoto img {
+  width:00%;
+}
 .webPjtText {
   font-family: "Noto Sans KR", sans-serif;
   width: 49%;
@@ -412,7 +418,7 @@ main {
   display: inline-block;
 }
 #innerSns span,
-#innerDetail span,
+#innerFullpage span,
 #innerBanner span {
   border: 1px solid #151515;
   border-radius: 100px;
@@ -421,7 +427,7 @@ main {
   margin: 0px 10px;
 }
 #snsContents span,
-#detailContents span,
+#fullpageContents span,
 #bannerContents span {
   border: none;
   border-radius: 0;
@@ -441,7 +447,7 @@ main {
   height: 40%;
   border-left: 3px solid #151515; 
 }
-#innerDetail {
+#innerFullpage {
   width: 100%;
   height: 50%;
   margin: 20px 0px;
@@ -460,7 +466,7 @@ main {
   text-align: center;
   position: relative;
 }
-#detailContents {
+#fullpageContents {
   width: 100%;
   height: 80%;
   margin-top:10px;
@@ -475,14 +481,14 @@ main {
   position: relative;
 }
 #snsContents span:hover,
-#detailContents span:hover,
+#fullpageContents span:hover,
 #bannerContents span:hover {
   background-color: #151515;
   color: #ffffff;
   border-radius: 20px;
 }
 #snsContents span:first-child,
-#detailContents span:first-child,
+#fullpageContents span:first-child,
 #bannerContents span:first-child {
   position: absolute;
   left: 0;
@@ -490,22 +496,22 @@ main {
   transform: translateY(-50%);
 }
 #snsContents span:last-child,
-#detailContents span:last-child,
+#fullpageContents span:last-child,
 #bannerContents span:last-child {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
-#snsItemBox, #detailItemBox, #bannerItemBox{
+#snsItemBox, #fullpageItemBox, #bannerItemBox{
   border:1px solid #151515;
   width:90%;
   height:100%;
   overflow: hidden;
 }
 #snsItemBox{
-  display:flex;
-  flex-flow:row nowrap;
+  display:flex; /*왜 플렉스 적용이 안되는 것일까*/
+  flex-flow:row nowrap; 
 }
 #snsItem1,#snsItem2{
   display: inline-block;
