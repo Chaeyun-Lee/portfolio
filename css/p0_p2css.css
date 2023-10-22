@@ -120,43 +120,30 @@ main {
   font-family: "Noto Sans KR", sans-serif;
 }
 #page01Left {
-  display: flex;
   width: 48%;
   height: 700px;
-  display: flex;
 }
 #imgWillHere{
+  display: inline-block;
   width:49%;
-  height:100%;
+  height:50%;
   background-color:#c4c4c4;
+  border-radius: 150px 150px 0px 0px;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+#imgWillHere img{
+  width:100%;
+  filter:grayscale(0.2);
+}
+#imgWillHere:hover{
+  border-radius: 150px 0px;
 }
 #page01Info {
+  display: inline-block;
   width: 50%;
-  height: 100%;
+  height: 30%;
   padding: 10px;
-  overflow-y: scroll;
-}
-#page01Info::-webkit-scrollbar {
-  width: 5px;
-}
-#page01Info::-webkit-scrollbar-thumb {
-  border-radius: 25px;
-  background-color: #151515ad;
-}
-#page01Info::-webkit-scrollbar-track {
-  border-radius: 25px;
-  background-color: #ebebeb;
-}
-#infoText {
-  background-color: #ebebeb;
-  height: 150px;
-  text-align: center;
-  padding: 30px;
-  margin-bottom: 20px;
-}
-#infoText span{
-  font-weight: 600;
-  font-size: 24px;
 }
 #personalKw li{
   display: inline-block;
@@ -165,13 +152,38 @@ main {
   border: 1px solid #151515;
   margin:5px 0px;
 }
-#infoSkill p {
-  text-align: right;
+#infoSkill::-webkit-scrollbar {
+  width: 5px;
+}
+#infoSkill::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #151515ad;
+}
+#infoSkill::-webkit-scrollbar-track {
+  border-radius: 25px;
+  background-color: #ebebeb;
+}
+#infoSkill{
+  display: block;
+  width:100%;
+  height:50%;
+  text-align: left;
+  overflow-y: scroll;
+}
+#infoText {
+  background-color: #ebebeb;
+  padding: 20px;
+}
+#infoText span{
+  font-weight: 600;
+  font-size: 24px;
+}
+#infoSkill>p {
   font-size: 22px;
   font-weight: bold;
+  margin-top:30px;
 }
 #infoSkill ul {
-  text-align: right;
   margin: 10px 0px;
 }
 #infoSkill li {
@@ -181,18 +193,6 @@ main {
   margin: 5px 0px;
   border-radius: 30px;
 }
-#infoSkill .Lv3 {
-  color: #ffffff;
-  background-color: #151515;
-}
-#infoSkill .Lv2 {
-  color: #ffffff;
-  background-color: #646464;
-}
-#infoSkill .Lv1 {
-  color: #ffffff;
-  background-color: #c4c4c4;
-}
 #page01Right {
   display: inline-block;
   width: 48%;
@@ -200,7 +200,6 @@ main {
 }
 #page01Edu,
 #page01Work {
-  /* border: 1px solid #151515; */
   display: flex;
   width: 100%;
   height: 270px;
@@ -329,6 +328,7 @@ main {
 .webPjtPhoto {
   width: 49%;
   height: 100%;
+  padding:1%;
   overflow-x: hidden;
 }
 .webPjtPhoto::-webkit-scrollbar {
@@ -342,8 +342,21 @@ main {
   border-radius: 25px;
   background-color: #ebebeb;
 }
+.imgBox{
+  height:fit-content;
+  border-radius: 30px;
+  overflow: hidden;
+  text-align: center;
+}
+
 .webPjtPhoto img {
   width:100%;
+  transform-origin: center 30%;
+  transform: scale(1.2);
+  transition:all 0.3s;
+}
+.webPjtPhoto img:hover{
+  transform: scale(1.7);
 }
 .webPjtText {
   font-family: "Noto Sans KR", sans-serif;
