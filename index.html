@@ -149,8 +149,16 @@
                           <!-- 사진 클릭하면 라이트박스 나오기-->
                         </div>
                         <div class="webPjtText">
-                          <h2>Adidas Online Mall</h2>
-                          <p>아디다스 웹 페이지를 리디자인하였습니다.</p>
+                          <p>개선 중</p>
+                          <h2>Adidas Online Store</h2>
+                          <p>아디다스 온라인 스토어를 리디자인하였습니다.</p>
+                          <p>
+                            <span class="material-symbols-outlined">
+                              desktop_windows </span
+                            ><span class="material-symbols-outlined">
+                              tablet_mac
+                            </span>
+                          </p>
                           <br />
                           <div class="webInfoTitle">
                             <p>제작기간</p>
@@ -161,8 +169,8 @@
                           <div class="webInfoText">
                             <p>32시간</p>
                             <p>100% (개인)</p>
-                            <p>Landing Page(Dropdown Menu)</p>
-                            <p>HTML5, CSS3, Javascript</p>
+                            <p>Landing Page(Web, Mobile)</p>
+                            <p>HTML5, CSS3, Javascript, jQeury</p>
                           </div>
                           <button>
                             <a href="https://www.adidas.co.kr/" target="_blank"
@@ -171,7 +179,7 @@
                           </button>
                           <button>
                             <a
-                              href="https://chaeyun-lee.github.io/test/"
+                              href="https://chaeyun-lee.github.io/project01.adidas/"
                               target="_blank"
                               >완성 페이지</a
                             >
@@ -191,7 +199,15 @@
                           <img src="https://placehold.it/500X600" alt="" />
                         </div>
                         <div class="webPjtText">
-                          <h2>Project Title</h2>
+                          <p>작업 중</p>
+                          <h2>매일유업</h2>
+                          <p>
+                            <span class="material-symbols-outlined">
+                              desktop_windows </span
+                            ><span class="material-symbols-outlined">
+                              tablet_mac
+                            </span>
+                          </p>
                           <p>Project 1-line introduce.</p>
                           <br />
                           <div class="webInfoTitle">
@@ -222,8 +238,16 @@
                           <img src="https://placehold.it/500X600" alt="" />
                         </div>
                         <div class="webPjtText">
+                          <p>작업 중</p>
                           <h2>Project Title</h2>
                           <p>Project 1-line introduce.</p>
+                          <p>
+                            <span class="material-symbols-outlined">
+                              desktop_windows </span
+                            ><span class="material-symbols-outlined">
+                              tablet_mac
+                            </span>
+                          </p>
                           <br />
                           <div class="webInfoTitle">
                             <p>제작기간</p>
@@ -253,8 +277,16 @@
                           <img src="https://placehold.it/500X600" alt="" />
                         </div>
                         <div class="webPjtText">
+                          <p>작업 중</p>
                           <h2>Project Title</h2>
                           <p>Project 1-line introduce.</p>
+                          <p>
+                            <span class="material-symbols-outlined">
+                              desktop_windows </span
+                            ><span class="material-symbols-outlined">
+                              tablet_mac
+                            </span>
+                          </p>
                           <br />
                           <div class="webInfoTitle">
                             <p>제작기간</p>
@@ -299,7 +331,9 @@
               <div id="innerFullpage">
                 <span>Fullpage Cover</span>
                 <div id="fullpageContents">
-                  <span class="material-symbols-outlined" id="fullpageLeft"> chevron_left </span>
+                  <span class="material-symbols-outlined" id="fullpageLeft">
+                    chevron_left
+                  </span>
                   <div id="fullpageItemBox">
                     <img src="img/fullPageSlide01.jpg" alt="" />
                     <img src="img/adidas-fullpagecover-soccer.jpg" alt="" />
@@ -313,7 +347,7 @@
               <div id="bannerContents">
                 <span class="material-symbols-outlined"> chevron_left </span>
                 <div id="bannerItemBox">
-                  <img src="img/adidas-outlet-1000x350.jpg" alt="">
+                  <img src="img/adidas-outlet-1000x350.jpg" alt="" />
                 </div>
                 <span class="material-symbols-outlined"> chevron_right </span>
               </div>
@@ -340,35 +374,33 @@
     });
 
     //intersection 감시 (page 나타날 때 애니메이션)
-    const pages = document.querySelectorAll('.pages');
+    const pages = document.querySelectorAll(".pages");
 
     const obsever = new IntersectionObserver(
-        (e) => {
-            e.forEach((pages)=>{
-                if(pages.isIntersecting){
-                    pages.target.classList.add('visible');
-                }
-                else{
-                    pages.target.classList.remove('visible');
-                }
-            })
-    },
-    {
-        threshold: 0.5
-    }
+      (e) => {
+        e.forEach((pages) => {
+          if (pages.isIntersecting) {
+            pages.target.classList.add("visible");
+          } else {
+            pages.target.classList.remove("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
     );
-        obsever.observe(pages[0]);
-        obsever.observe(pages[1]);
-        obsever.observe(pages[2]);
+    obsever.observe(pages[0]);
+    obsever.observe(pages[1]);
+    obsever.observe(pages[2]);
 
+    const scrollDown = document.querySelector("#scrollDown");
 
-      const scrollDown = document.querySelector('#scrollDown');
-
-      const typeAni = new TypeIt(scrollDown, {speed:50, startDelay:1000})
-      .type("Scroll down!", {delay:500})
-      .move(-4, {delay:200})
+    const typeAni = new TypeIt(scrollDown, { speed: 50, startDelay: 1000 })
+      .type("Scroll down!", { delay: 500 })
+      .move(-4, { delay: 200 })
       .delete(1)
-      .type("D", {delay:300})
+      .type("D", { delay: 300 })
       .move(4)
       .pause(500)
       .type("<br>Please :)")

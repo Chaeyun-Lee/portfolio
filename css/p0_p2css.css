@@ -307,7 +307,7 @@ main {
   color: #ffffff;
   cursor: pointer;
 }
-#pjtList span {
+.webList > span {
   position: absolute;
   left: 0;
 }
@@ -359,7 +359,6 @@ main {
   overflow: hidden;
   text-align: center;
 }
-
 .webPjtPhoto img {
   width:100%;
   transform-origin: center 30%;
@@ -373,11 +372,20 @@ main {
   font-family: "Noto Sans KR", sans-serif;
   width: 49%;
   height: auto;
-  padding: 15% 30px;
+  padding: 10% 30px;
   border-left: 2px solid #151515;
   font-size: large;
   text-align: left;
   position: relative;
+}
+.webPjtText > p:first-child{
+  font-size: 0.9rem;
+  border-left:2px solid #151515;
+  padding:5px;
+}
+.webPjtText > p > span{
+  font-size: 40px;
+  margin:0px 5px;
 }
 .webPjtText p {
   margin: 10px 0px;
@@ -403,12 +411,12 @@ main {
   transition: 0.5s;
   position:absolute;
   right:45%;
-  bottom:25%;
+  bottom:20%;
 }
 .webPjtText button:last-child{
   position:absolute;
   right:4%;
-  bottom:25%;
+  bottom:20%;
 }
 .webPjtText button:hover{
   background-color: #151515;
