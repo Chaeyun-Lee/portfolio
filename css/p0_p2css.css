@@ -584,6 +584,9 @@ main {
   left:0;
   width:100%;
 }
+.fullpageItems{
+  transition: all 0.3s;
+}
 #bannerItemBox img{
   height:100%;
 }
