@@ -558,7 +558,7 @@ main {
   transform: translateY(-50%);
 }
 #snsItemBox, #fullpageItemBox, #bannerItemBox{
-  border:1px solid #151515;
+  /* border:1px solid #151515; */
   width:90%;
   height:100%;
   overflow: hidden;
@@ -569,7 +569,7 @@ main {
 }
 #snsItem1,#snsItem2{
   display: inline-block;
-  border:1px solid #151515;
+  /* border:1px solid #151515; */
   width:250px;
   height:250px;
   margin:0px 20px;
