@@ -564,7 +564,7 @@ main {
   overflow: hidden;
 }
 #snsItemBox{
-  display:flex; /*왜 플렉스 적용이 안되는 것일까*/
+  display:flex;
   flex-flow:row nowrap; 
 }
 #snsItem1,#snsItem2{
