@@ -17,7 +17,7 @@
   <body>
     <div id="container">
       <header id="page00">
-        <img src="img/indexBackgroundNewVer.jpg" alt="" id="backgroundImg" />
+        <!-- <img src="img/indexBackgroundNewVer.jpg" alt="" id="backgroundImg" /> -->
         <p id="scrollDown"></p>
         <nav>
           <ul id="mainPagebtn">
@@ -41,7 +41,7 @@
                   <div id="page01Info">
                     <h2>이채윤</h2>
                     <p>2000 . 08 . 11</p>
-                    <p>경기도 고양시 거주</p>
+                    <p>경기도 고양시</p>
                     <p>lycheey@naver.com</p>
                     <ul id="personalKw">
                       <li>#책임감</li>
@@ -54,7 +54,7 @@
                 <div id="infoSkill">
                   <div id="infoText">
                     <p>
-                      <span>성장의 한계가 없는</span> 프론트엔드 개발자,<br />
+                      <span>성장의 한계가 없는</span> 웹 퍼블리셔,<br />
                       <span>이채윤</span> 입니다.
                     </p>
                   </div>
@@ -72,7 +72,7 @@
                   <ul>
                     <li>TOEIC 835</li>
                     <li>2종 보통 운전면허</li>
-                    <li>웹디자인기능사 필기</li>
+                    <li>웹디자인기능사</li>
                   </ul>
                   <p>취미/관심</p>
                   <ul>
@@ -84,7 +84,10 @@
               </section>
               <section id="page01Right">
                 <div id="page01Edu">
-                  <div id="eduTitle">학력 및 교육</div>
+                  <div id="eduTitle">
+                    학력 및 교육
+                    <span class="material-symbols-outlined"> expand_more </span>
+                  </div>
                   <div id="eduText">
                     <p class="period">
                       <span>2023.05 ~ 2023.11</span><br />UX/UI
@@ -100,14 +103,15 @@
                 </div>
                 <div id="page01Work">
                   <div id="workTitle">
-                    <p>이력</p>
+                    이력
+                    <span class="material-symbols-outlined"> expand_more </span>
                   </div>
                   <div id="workText">
                     <p class="period">
                       <span>2020.12 ~ 2023.02 (2년 3개월)</span><br />풋락커
                       코리아 | 슈퍼바이저<span>(주 40시간)</span><br />
                       <span
-                        >PT->FT->SV 진급 / 홍대, 신촌, 신사가로수길 지점 근무<br />전체적인
+                        >홍대, 신촌, 신사가로수길 지점 근무<br />전체적인
                         매장관리 및 고객응대
                       </span>
                     </p>
@@ -146,7 +150,6 @@
                           <div class="imgBox">
                             <img src="img/MockupFile-2.png" alt="" />
                           </div>
-                          <!-- 사진 클릭하면 라이트박스 나오기-->
                         </div>
                         <div class="webPjtText">
                           <p>개선 중</p>
@@ -159,31 +162,44 @@
                               tablet_mac
                             </span>
                           </p>
-                          <br />
-                          <div class="webInfoTitle">
-                            <p>제작기간</p>
-                            <p>기여도</p>
-                            <p>제작페이지</p>
-                            <p>사용툴</p>
+                          <ul class="webInfo">
+                            <li>
+                              <div class="webInfoTitle">제작기간</div>
+                              <div class="webInfoText">32시간</div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">기여도</div>
+                              <div class="webInfoText">100%(개인)</div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">제작페이지</div>
+                              <div class="webInfoText">
+                                Landing Page(Web, Mobile)
+                              </div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">사용툴</div>
+                              <div class="webInfoText">
+                                HTML5, CSS3, Javascript, jQeury
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="webBtns">
+                            <button>
+                              <a
+                                href="https://www.adidas.co.kr/"
+                                target="_blank"
+                                >기존 페이지</a
+                              >
+                            </button>
+                            <button>
+                              <a
+                                href="https://chaeyun-lee.github.io/project01.adidas/"
+                                target="_blank"
+                                >완성 페이지</a
+                              >
+                            </button>
                           </div>
-                          <div class="webInfoText">
-                            <p>32시간</p>
-                            <p>100% (개인)</p>
-                            <p>Landing Page(Web, Mobile)</p>
-                            <p>HTML5, CSS3, Javascript, jQeury</p>
-                          </div>
-                          <button>
-                            <a href="https://www.adidas.co.kr/" target="_blank"
-                              >기존 페이지</a
-                            >
-                          </button>
-                          <button>
-                            <a
-                              href="https://chaeyun-lee.github.io/project01.adidas/"
-                              target="_blank"
-                              >완성 페이지</a
-                            >
-                          </button>
                         </div>
                       </li>
                     </ul>
@@ -199,30 +215,43 @@
                           <img src="https://placehold.it/500X600" alt="" />
                         </div>
                         <div class="webPjtText">
-                          <p>작업 중</p>
+                          <p>개선 중</p>
                           <h2>매일유업</h2>
                           <p>
                             <span class="material-symbols-outlined">
-                              desktop_windows </span
-                            ><span class="material-symbols-outlined">
-                              tablet_mac
-                            </span>
+                              desktop_windows </span>
                           </p>
-                          <p>Project 1-line introduce.</p>
-                          <br />
-                          <div class="webInfoTitle">
-                            <p>제작기간</p>
-                            <p>기여도</p>
-                            <p>제작페이지</p>
-                            <p>사용툴</p>
+                          <p>매일유업 사이트를 리디자인하였습니다. </p>
+                          <ul class="webInfo">
+                            <li>
+                              <div class="webInfoTitle">제작기간</div>
+                              <div class="webInfoText">32시간</div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">기여도</div>
+                              <div class="webInfoText">100%(개인)</div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">제작페이지</div>
+                              <div class="webInfoText">
+                                랜딩 페이지, 회사소개, 고객센터
+                              </div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">사용툴</div>
+                              <div class="webInfoText">
+                                HTML5, CSS3, Javascript, jQeury
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="webBtns">
+                            <button>
+                              <a href="https://www.maeil.com/" target="_blank">기존 페이지</a>
+                            </button>
+                            <button>
+                              <a href="https://chaeyun-lee.github.io/project02.maeil/" target="_blank">완성 페이지</a>
+                            </button>
                           </div>
-                          <div class="webInfoText">
-                            <p>n시간</p>
-                            <p>100% (개인)</p>
-                            <p>Main, Sub1, Sub2, Log-in</p>
-                            <p>HTML5, CSS3, Javascript, jQeury</p>
-                          </div>
-                          <button>완성 페이지</button>
                         </div>
                       </li>
                     </ul>
@@ -239,8 +268,9 @@
                         </div>
                         <div class="webPjtText">
                           <p>작업 중</p>
-                          <h2>Project Title</h2>
-                          <p>Project 1-line introduce.</p>
+                          <h2>태국정부관광청</h2>
+                          <p>태국정부관광청 사이트를 리디자인하였습니다. <br>
+                          Naver Map API가 사용되었습니다.</p>
                           <p>
                             <span class="material-symbols-outlined">
                               desktop_windows </span
@@ -248,20 +278,36 @@
                               tablet_mac
                             </span>
                           </p>
-                          <br />
-                          <div class="webInfoTitle">
-                            <p>제작기간</p>
-                            <p>기여도</p>
-                            <p>제작페이지</p>
-                            <p>사용툴</p>
+                          <ul class="webInfo">
+                            <li>
+                              <div class="webInfoTitle">제작기간</div>
+                              <div class="webInfoText">32시간</div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">기여도</div>
+                              <div class="webInfoText">100%(개인)</div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">제작페이지</div>
+                              <div class="webInfoText">
+                                랜딩 페이지(웹, 모바일)<br>태국관광청 - 찾아오시는 길,<br>태국 정보 - 태국소개/유용한 태국어,<br>테마 여행 - 골프/스파/허니문/국제학교/자연경관
+                              </div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">사용툴</div>
+                              <div class="webInfoText">
+                                HTML5, CSS3, Javascript, jQeury, NAVER MAP API
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="webBtns">
+                            <button>
+                              <a href="#" target="_blank">기존 페이지</a>
+                            </button>
+                            <button>
+                              <a href="#" target="_blank">완성 페이지</a>
+                            </button>
                           </div>
-                          <div class="webInfoText">
-                            <p>n시간</p>
-                            <p>100% (개인)</p>
-                            <p>Main, Sub1, Sub2, Log-in</p>
-                            <p>HTML5, CSS3, Javascript, jQeury</p>
-                          </div>
-                          <button>완성 페이지</button>
                         </div>
                       </li>
                     </ul>
@@ -287,20 +333,36 @@
                               tablet_mac
                             </span>
                           </p>
-                          <br />
-                          <div class="webInfoTitle">
-                            <p>제작기간</p>
-                            <p>기여도</p>
-                            <p>제작페이지</p>
-                            <p>사용툴</p>
+                          <ul class="webInfo">
+                            <li>
+                              <div class="webInfoTitle">제작기간</div>
+                              <div class="webInfoText">32시간</div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">기여도</div>
+                              <div class="webInfoText">100%(개인)</div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">제작페이지</div>
+                              <div class="webInfoText">
+                                Landing Page(Web, Mobile)
+                              </div>
+                            </li>
+                            <li>
+                              <div class="webInfoTitle">사용툴</div>
+                              <div class="webInfoText">
+                                HTML5, CSS3, Javascript, jQeury
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="webBtns">
+                            <button>
+                              <a href="#" target="_blank">기존 페이지</a>
+                            </button>
+                            <button>
+                              <a href="#" target="_blank">완성 페이지</a>
+                            </button>
                           </div>
-                          <div class="webInfoText">
-                            <p>n시간</p>
-                            <p>100% (개인)</p>
-                            <p>Main, Sub1, Sub2, Log-in</p>
-                            <p>HTML5, CSS3, Javascript, jQeury</p>
-                          </div>
-                          <button>완성 페이지</button>
                         </div>
                       </li>
                     </ul>
@@ -314,8 +376,7 @@
         <!-- Page02 끝 //////////// Page03 시작 -->
         <div id="page03" class="pages">
           <div id="page03In">
-            <h1><span>Design</span></h1>
-            <h1>My Projects</h1>
+            <h1>My <br><span>Design</span> Projects</h1>
             <div id="innerLeft">
               <div id="innerSns">
                 <span>SNS</span>
@@ -335,21 +396,19 @@
                     chevron_left
                   </span>
                   <div id="fullpageItemBox">
-                    <img src="img/fullPageSlide01.jpg" alt="" class="fullpageItems"/>
-                    <img src="img/adidas-fullpagecover-soccer.jpg" alt="" class="fullpageItems"/>
+                    <img
+                      src="img/fullPageSlide01.jpg"
+                      alt=""
+                      class="fullpageItems"
+                    />
+                    <img
+                      src="img/adidas-fullpagecover-soccer.jpg"
+                      alt=""
+                      class="fullpageItems"
+                    />
                   </div>
                   <span class="material-symbols-outlined"> chevron_right </span>
                 </div>
-              </div>
-            </div>
-            <div id="innerBanner">
-              <span>Banner</span>
-              <div id="bannerContents">
-                <span class="material-symbols-outlined"> chevron_left </span>
-                <div id="bannerItemBox">
-                  <img src="img/adidas-outlet-1000x350.jpg" alt="" />
-                </div>
-                <span class="material-symbols-outlined"> chevron_right </span>
               </div>
             </div>
             <p id="page03IndexNum">03</p>
