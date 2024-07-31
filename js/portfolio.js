@@ -1,3 +1,14 @@
+//resize 시 0.3초 후 새로고침(reload)
+let delay = 300;
+let timer = null;
+
+window.addEventListener('resize', function(){
+	clearTimeout(timer);
+	timer = setTimeout(function(){
+		location.reload(true);
+	}, delay);
+});
+
 //scroll event(menu 상단고정)
 const headerMenu = document.querySelector("#mainPagebtn");
 const mainPage = document.querySelector("#page01");
@@ -11,37 +22,58 @@ window.addEventListener("scroll", function () {
   }
 });
 
-//intersection 감시 (page 나타날 때 애니메이션)
-const pages = document.querySelectorAll(".pages");
+//intersection 감시 (page 나타날 때 애니메이션 / mobile에서는 감시해제)
+const screenW = window.matchMedia("screen and (min-width: 1023px)");
 
-const obsever = new IntersectionObserver(
-  (e) => {
-    e.forEach((pages) => {
-      if (pages.isIntersecting) {
-        pages.target.classList.add("visible");
-      } else {
-        pages.target.classList.remove("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.5,
-  }
-);
-obsever.observe(pages[0]);
-obsever.observe(pages[1]);
-obsever.observe(pages[2]);
+if (screenW.matches) {
+  const pages = document.querySelectorAll(".pages");
+
+  const obsever = new IntersectionObserver(
+    (e) => {
+      e.forEach((pages) => {
+        if (pages.isIntersecting) {
+          pages.target.classList.add("visible");
+        } else {
+          pages.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+  obsever.observe(pages[0]);
+  obsever.observe(pages[1]);
+  obsever.observe(pages[2]);
+} else {
+  const pages = document.querySelectorAll(".pages");
+  const obsever = new IntersectionObserver(
+    (e) => {
+      e.forEach((pages) => {
+        if (pages.isIntersecting) {
+          pages.target.classList.add("visible");
+        } else {
+          pages.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+  obsever.unobserve(pages[0]);
+  obsever.unobserve(pages[1]);
+  obsever.unobserve(pages[2]);
+};
 
 const scrollDown = document.querySelector("#scrollDown");
 
 const typeAni = new TypeIt(scrollDown, { speed: 50, startDelay: 1000 })
-  .type("Scroll down!", { delay: 500 })
-  .move(-4, { delay: 200 })
-  .delete(1)
-  .type("D", { delay: 300 })
-  .move(4)
+  .type("아래에 더욱 많은", { delay: 500 })
   .pause(500)
-  .type("<br>Please :)")
+  .type(" 내용들이 있어요!")
+  .pause(500)
+  .type("<br><span class='material-symbols-outlined'>arrow_downward</span> ")
   .go();
 
 //jquery
@@ -84,7 +116,6 @@ let num = 0;
 
 function carousel() {
   const fullpageCoverItems = document.querySelectorAll(".fullpageItems");
-  
 
   for (let i = 0; i < fullpageCoverItems.length; i++) {
     fullpageCoverItems[i].style.opacity = "0";
@@ -95,4 +126,16 @@ function carousel() {
     num = 1;
   }
   fullpageCoverItems[num - 1].style.opacity = "1";
+  console.log(num);
 }
+
+//Mobile
+window.resizeTo("1082px",()=>{console.log(window.screenX)})
+$(function () {
+    $("#eduTitle").on("click", function () {
+      $("#eduText").slideToggle(300, "linear");
+    });
+    $("#workTitle").on("click", function () {
+      $("#workText").slideToggle(300, "linear");
+    });
+});

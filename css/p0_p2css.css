@@ -33,22 +33,45 @@ body {
   width: 100vw;
   height: 100vh;
 }
-/* #page00{
-  background:url(../img/indexBackgroundMobile.jpg);
-} */
 header {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background:url(../img/indexBackgroundNewVer.jpg) no-repeat;
-  background-size: cover;
+  /* background:url(../img/indexBackgroundNewVer.jpg) no-repeat;
+  background-size: cover; */
 }
-#backgroundImg {
-  width: 100vw;
+.middler{
+  margin:3% auto;
+  width: 60vw;
+  height:60vh;
+  display:flex;
+  flex: row nowrap;
+  justify-content: center;
+}
+.photo {
+  border-radius:100px 100px 0 ;
+}
+.textBox{
+  flex: 3;
+  padding:12% 30px;
+  width:20%;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.5em;
+  font-size:2.5em;
+  font-weight: 400;
+  color:#454545;
+}
+.textBox>p:nth-child(2){
+  font-weight: 600;
+}
+.strong{
+  font-weight: 600;
+  font-size: 1.25em;
 }
 #scrollDown {
-  font-weight: 600;
-  font-size: 52px;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
   position: absolute;
   bottom: 20%;
   left: 50%;
@@ -156,9 +179,26 @@ main {
 }
 #page01Info {
   display: inline-block;
-  width: 50%;
+  width: 100%;
   height: 30%;
   padding: 10px;
+  position: relative;
+}
+#page01Info> a{
+  background-color: #151515;
+  color:#ffffff;
+  padding:1px 10px;
+  border-radius: 10px;
+  position: absolute;
+  top:50%;
+  right:5%;
+  transform: translateY(-50%);
+  transition: color 1s ease-in-out;
+}
+#page01Info> a:hover{
+  background-color: #ffffff;
+  color:#151515;
+  border:1px solid black;
 }
 #personalKw li {
   display: inline-block;
@@ -181,22 +221,15 @@ main {
 #infoSkill {
   display: block;
   width: 100%;
-  height: 40%;
+  padding: 0 10px;
+  height:40%;
   text-align: left;
   overflow-y: scroll;
-}
-#infoText {
-  background-color: #ebebeb;
-  padding: 20px;
-}
-#infoText span {
-  font-weight: 600;
-  font-size: 24px;
 }
 #infoSkill > p {
   font-size: 22px;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 #infoSkill ul {
   margin: 10px 0px;
@@ -208,40 +241,57 @@ main {
   margin: 5px 0px;
   border-radius: 30px;
 }
+.react{
+  animation: indexEffect 0.8s infinite alternate ease-in-out;
+}
 #page01Right {
   display: inline-block;
   width: 48%;
   height: 700px;
+}
+#page01Right> img{
+  width:100%;
+  margin:0 auto;
+}
+#page01Right > p{
+  margin:20px 0;
+  font-size: 1.1em;
+}
+#page01Right > p>span{
+  font-size: 0.8em;
+  color:#454545;
 }
 #page01Right span.material-symbols-outlined {
   display: none;
 }
 #page01Edu,
 #page01Work {
-  display: flex;
+  /* display: flex; */
   width: 100%;
-  height: 270px;
-  margin-bottom: 50px;
+  height: fit-content;
+  margin-bottom: 0px;
 }
 #eduTitle,
 #workTitle {
-  width: 40%;
-  padding: 10px;
-  text-align: right;
+  width: 100%;
+  padding: 5px 10px;
+  text-align: left;
   font-size: 22px;
   font-weight: bold;
+  cursor: pointer;
 }
 #eduText,
 #workText {
-  width: 60%;
-  padding: 30px 10px;
+  display: none;
+  width:100%;
+  padding: 0px 10px;
   font-size: 18px;
-  border-left: 1px solid #151515;
-  display: block;
+  /* border-left: 1px solid #151515; */
+  /* display: block; */
 }
 #eduText p,
 #workText p {
-  margin: 10px 0px;
+  margin: 0px 0px;
 }
 #eduText span,
 #workText span {
@@ -308,6 +358,9 @@ main {
 .webList > span {
   position: absolute;
   left: 0;
+}
+.webList:last-child{
+  display: none;
 }
 .pjtDetails {
   position: absolute;
@@ -469,6 +522,11 @@ main {
 #page03In div {
   display: inline-block;
 }
+#innerSns {
+  width: 38%;
+  height: 100%;
+  margin: 0px 0px;
+}
 #innerSns span,
 #innerFullpage span {
   border: 1px solid #151515;
@@ -487,13 +545,8 @@ main {
   bottom: 1%;
   left: 0;
 }
-#innerSns {
-  width: 48%;
-  height: 100%;
-  margin: 0px 0px;
-}
 #innerFullpage {
-  width: 50%;
+  width:60%;
   height: 100%;
   margin: 0px 0px;
   border-left: 2px solid #151515;
@@ -550,12 +603,13 @@ main {
   display: flex;
   flex-flow: row nowrap;
 }
-#snsItem1,
-#snsItem2 {
+#snsItemBox img{
+  height: 100%;
+}
+#snsItem1{
   display: inline-block;
-  /* border:1px solid #151515; */
-  width: 250px;
-  height: 250px;
+  width: 500px;
+  height:100%;
   margin: 0px 20px;
 }
 #fullpageItemBox {
@@ -566,7 +620,7 @@ main {
   position: absolute;
   top: 5%;
   left: 0;
-  width: 100%;
+  width:100%;
 }
 .fullpageItems {
   transition: all 0.3s;
@@ -585,9 +639,25 @@ main {
     width: 100vw;
     height: 100vh;
     position: relative;
-    background:url(../img/indexBackgroundMobile.jpg) no-repeat;
-    background-size: cover;
+    /* background:url(../img/indexBackgroundMobile.jpg) no-repeat;
+    background-size: cover; */
     box-shadow: 0px 0px 50px 1px #ebebeb;
+  }
+  .middler{
+    margin:0 auto;
+    padding:5% 0;
+    width: 100vw;
+    height:100vh;
+    display:flex;
+    flex-flow: column nowrap;
+  }
+  .photo {
+    width:55vw;
+  }
+  .textBox{
+    padding:5% 30px;
+    width:100%;
+    font-size:1.8em;
   }
   #scrollDown {
     display: none;
@@ -658,50 +728,17 @@ main {
     border-radius: 0px 0px;
   }
   #page01Info {
-    width: 49%;
+    width: 100%;
+  }
+  #page01Info> a{
+    position: absolute;
+    top:10%;
+    right:0%;
+    transform: translateY(0%);
   }
   #personalKw li {
     margin: 1px 0px;
     font-size: 0.8em;
-  }
-  #infoSkill {
-    width: 100%;
-  }
-  #infoText {
-    font-size: 14px;
-  }
-  #infoText span {
-    font-size: 18px;
-  }
-  #infoSkill > p {
-    font-size: medium;
-    margin-top: 20px;
-  }
-  #infoSkill ul {
-    margin: 5px 0px;
-  }
-  #infoSkill li {
-    padding: 0px 7px;
-    font-size: 0.9em;
-  }
-  /*취미 숨김*/
-  #infoSkill p:nth-of-type(3),
-  #infoSkill ul:nth-of-type(3) {
-    display: none;
-  }
-  /*스크롤바 숨김*/
-  #infoSkill::-webkit-scrollbar {
-    width: 0px;
-  }
-  #page01Right {
-    display: inline-block;
-    width: 100%;
-    height: min-content;
-  }
-  #page01Right span.material-symbols-outlined {
-    display: inline-block;
-    font-size: large;
-    padding: 5px 0px;
   }
   #page01Edu,
   #page01Work {
@@ -727,6 +764,49 @@ main {
     padding: 0px;
     font-size: small;
     border-left: 0px;
+  }
+  #infoSkill {
+    width: 100%;
+  }
+  #infoText {
+    font-size: 14px;
+  }
+  #infoText span {
+    font-size: 18px;
+  }
+  #infoSkill > p {
+    font-size: medium;
+    margin-top: 20px;
+  }
+  #infoSkill ul {
+    margin: 5px 0px;
+  }
+  #infoSkill li {
+    padding: 0px 7px;
+    font-size: 0.9em;
+  }
+  /* 취미 숨김*/
+  #infoSkill p:nth-of-type(3),
+  #infoSkill ul:nth-of-type(3) {
+    display: none;
+  }
+  /*스크롤바 숨김*/
+  #infoSkill::-webkit-scrollbar {
+    width: 0px;
+  }
+  #page01Right {
+    display: inline-block;
+    width: 100%;
+    height: min-content;
+  }
+  #page01Right > p{
+    margin:10px 0;
+    font-size: 1em;
+  }
+  #page01Right span.material-symbols-outlined {
+    display: inline-block;
+    font-size: large;
+    padding: 5px 0px;
   }
   /* --------------page02--------------- */
   #page02In {
@@ -886,6 +966,9 @@ main {
     position: absolute;
     bottom: 1%;
     left: 0;
+  }
+  #innerLeft span{
+    display: none;
   }
   #innerSns {
     width: 100%;
