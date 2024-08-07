@@ -129,15 +129,10 @@ function carousel() {
   console.log(num);
 }
 
-//Mobile
-window.resizeTo("1082px",()=>{console.log(window.screenX)})
-$(function () {
-  if(window.screenX<=1082){
+//Page02 toggle
     $("#eduTitle").on("click", function () {
       $("#eduText").slideToggle(300, "linear");
     });
     $("#workTitle").on("click", function () {
       $("#workText").slideToggle(300, "linear");
     });
-  }
-});
