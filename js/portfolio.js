@@ -73,7 +73,7 @@ const typeAni = new TypeIt(scrollDown, { speed: 50, startDelay: 1000 })
   .pause(500)
   .type(" 내용들이 있어요!")
   .pause(500)
-  .type("<br><span class='material-symbols-outlined>arrow_downward</span> ")
+  .type("<br><span class='material-symbols-outlined'>arrow_downward</span> ")
   .go();
 
 //jquery
@@ -82,7 +82,6 @@ const typeAni = new TypeIt(scrollDown, { speed: 50, startDelay: 1000 })
 const menuBtns = $(".menuBtns");
 $(window).scroll(function () {
   const scrollNum = $(window).scrollTop();
-  console.log(scrollNum);
   if (scrollNum <= 700) {
     $(".menuBtns:eq(0)").addClass("actives");
     $(".menuBtns:eq(0)").siblings().removeClass("actives");
