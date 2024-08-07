@@ -5,7 +5,9 @@ let timer = null;
 window.addEventListener('resize', function(){
 	clearTimeout(timer);
 	timer = setTimeout(function(){
-		location.reload(true);
+    if(window.innerWidth<=1082){
+      location.reload(true);
+    }
 	}, delay);
 });
 
@@ -128,7 +130,7 @@ function carousel() {
   console.log(num);
 }
 
-//Page02 toggle
+//Page01 toggle
     $("#eduTitle").on("click", function () {
       $("#eduText").slideToggle(300, "linear");
     });
