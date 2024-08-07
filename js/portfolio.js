@@ -5,7 +5,7 @@ let timer = null;
 window.addEventListener('resize', function(){
 	clearTimeout(timer);
 	timer = setTimeout(function(){
-    if(window.innerWidth<=1082){
+    if(window.innerWidth>=1082){
       location.reload(true);
     }
 	}, delay);
