@@ -73,7 +73,7 @@ const typeAni = new TypeIt(scrollDown, { speed: 50, startDelay: 1000 })
   .pause(500)
   .type(" 내용들이 있어요!")
   .pause(500)
-  .type("<br><span class='material-symbols-outlined'>arrow_downward</span> ")
+  .type("<br><span class='material-symbols-outlined>arrow_downward</span> ")
   .go();
 
 //jquery
@@ -132,10 +132,12 @@ function carousel() {
 //Mobile
 window.resizeTo("1082px",()=>{console.log(window.screenX)})
 $(function () {
+  if(window.screenX<=1082){
     $("#eduTitle").on("click", function () {
       $("#eduText").slideToggle(300, "linear");
     });
     $("#workTitle").on("click", function () {
       $("#workText").slideToggle(300, "linear");
     });
+  }
 });
