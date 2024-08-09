@@ -557,6 +557,10 @@ main {
 .email>p{
   font-size: 1.5em;
 }
+.email>p>span{
+  font-size: 0.7em;
+  color:#454545;
+}
 .copyEmail{
   display: inline-block;
   margin: 0 auto;
