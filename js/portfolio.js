@@ -15,7 +15,7 @@ window.addEventListener('resize', function(){
 const headerMenu = document.querySelector("#mainPagebtn");
 const mainPage = document.querySelector("#page01");
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 800) {
+  if (window.scrollY > 750) {
     headerMenu.style.position = "fixed";
     headerMenu.style.top = "5%";
   } else if (window.scrollY <= 800) {
