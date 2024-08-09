@@ -50,6 +50,7 @@ header {
   justify-content: center;
 }
 .photo {
+  flex:1;
   border-radius:100px 100px 0 ;
 }
 .textBox{
@@ -489,6 +490,8 @@ main {
   right: 0;
   padding: 50px;
   font-size: 24em;
+  color:transparent;
+  -webkit-text-stroke: #343434 2px;
 }
 /* Page02 끝  /////////// Page03 시작 */
 #page03 {
@@ -502,140 +505,106 @@ main {
   border-bottom: none;
   border-radius: 100px 100px 0px 0px;
   color: #151515;
-  position: relative;
-  display: flex;
 }
 #page03In h1 {
-  text-align: left;
-  font-size: 6em;
+  font-size: 7em;
   font-weight: 100;
   display: inline-block;
-  position: absolute;
-  right: 3%;
-  top: 15%;
+  border:1px solid black;
 }
-#page03In h1 span {
-  border-radius: 100px;
-  color: white;
-  background-color: #151515;
-  padding: 0px 40px;
-}
-#page03In div {
-  display: inline-block;
-}
-#innerSns {
-  width: 38%;
-  height: 100%;
-  margin: 0px 0px;
-}
-#innerSns span,
-#innerFullpage span {
-  border: 1px solid #151515;
-  border-radius: 100px;
-  font-size: 40px;
-  padding: 0px 20px;
-  margin: 0px 10px;
-}
-#innerLeft {
-  height: 50%;
-  width: 100%;
+.wrapBox{
   display: flex;
-  flex-flow: row wrap;
-  padding: 0px;
-  position: absolute;
-  bottom: 1%;
-  left: 0;
-}
-#innerFullpage {
-  width:60%;
-  height: 100%;
-  margin: 0px 0px;
-  border-left: 2px solid #151515;
-}
-#snsContents {
-  width: 100%;
-  height: 80%;
-  margin-top: 10px;
-  text-align: center;
-  position: relative;
-}
-#fullpageContents {
-  width: 100%;
-  height: 80%;
-  margin-top: 10px;
-  text-align: center;
-  position: relative;
-}
-#snsContents span,
-#fullpageContents span {
-  border: none;
-  border-radius: 0;
-  font-size: none;
-  padding: 0px;
-  margin: 0px;
-  cursor: pointer;
-}
-#snsContents span:hover,
-#fullpageContents span:hover {
-  font-weight: bold;
-}
-#snsContents span:first-child,
-#fullpageContents span:first-child {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-#snsContents span:last-child,
-#fullpageContents span:last-child {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-#snsItemBox,
-#fullpageItemBox {
-  /* border:1px solid #151515; */
-  width: 90%;
-  height: 100%;
+  width:100%;
   overflow: hidden;
 }
-#snsItemBox {
+.rollingBanner{
   display: flex;
-  flex-flow: row nowrap;
+  overflow: hidden;
+  flex-shrink: 0;
 }
-#snsItemBox img{
-  height: 100%;
+.rollingList{
+  font-size: 8em;
+  width: fit-content;
+  margin: 0 30px;
+  color:#343434;
 }
-#snsItem1{
-  display: inline-block;
-  width: 500px;
-  height:100%;
-  margin: 0px 20px;
+@keyframes rolling1 {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(-100%); }
+	50.01% { transform: translateX(100%); }
+	100% { transform: translateX(0); }
 }
-#fullpageItemBox {
-  position: relative;
-  height: 100%;
-}
-#fullpageItemBox img {
-  position: absolute;
-  top: 5%;
-  left: 0;
-  width:100%;
-}
-.fullpageItems {
-  transition: all 0.3s;
-}
-#page03IndexNum {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 5%;
-  padding: 0;
-  font-size: 24em;
+@keyframes rolling2 {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-200%); }
 }
 
-@media screen and (max-width: 1023px) {
+.rollingBanner.original {
+	animation: rolling1 30s linear infinite;
+}
+.rollingBanner.clone {
+	animation: rolling2 30s linear infinite;
+}
+.innerPage03{
+  padding:30px;
+  text-align: center;
+  color:#454545;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.innerPage03 span{
+  font-size: 2em;
+}
+.email>p{
+  font-size: 1.5em;
+}
+.copyEmail{
+  display: inline-block;
+  margin: 0 auto;
+  height: min-content;
+  position:relative;
+}
+.myEmail{
+  font-size: 2.5em;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #343434;
+  padding: 3px 0px;
+  border-radius: 30px;
+  color:#343434;
+}
+.copyEmail>button{
+  width:100%;
+  height: 55px;
+  border-radius: 30px;
+  background: transparent;
+  outline: none;
+  border:none;
+  position:absolute;
+  left:0;
+  top:0;
+  cursor: pointer;
+}
+.copyEmail>button:hover{
+  border:3px solid #343434;
+}
+.resume{
+  margin-top:30px;
+  font-size: 1.25em;
+}
+.resume>a{
+  display: inline-block;
+  border: 1px solid #343434;
+  padding: 3px 20px;
+  margin: 5px 0px;
+  border-radius: 30px;
+  color:#343434;
+  transition: all 0.5s ease;
+}
+.resume>a:hover{
+  background-color: #343434;
+  color:#ebebeb;
+}
+@media screen and (max-width: 1082px) {
   #page00 {
     width: 100vw;
     height: 100vh;
@@ -653,7 +622,7 @@ main {
     flex-flow: column nowrap;
   }
   .photo {
-    width:55vw;
+    width: 50vw;
   }
   .textBox{
     padding:5% 30px;
@@ -935,96 +904,36 @@ main {
   /* ---------------page 03--------------- */
   #page03In {
     padding: 20px 30px;
-    min-height: 100vh;
+    min-height: 80vh;
     height: fit-content;
-    position: relative;
-    display: flex;
   }
   #page03In h1 {
-    font-size: 3em;
-    position: absolute;
-    right: 3%;
-    top: 0%;
+    font-size:3.5em;
+    background-color: aqua;
   }
-  #page03In h1 span {
-    padding: 0px 20px;
-    display: block;
+  .rollingList{
+    font-size: 4em;
   }
-  #page03IndexNum {
-    font-size: 7em;
+  .innerPage03 span{
+    font-size: 1em;
   }
-  #innerSns span,
-  #innerFullpage span {
-    font-size: 26px;
-    padding: 0px 20px;
-    margin: 0px 10px;
+  .email>p{
+    font-size: 1.18em;
   }
-  #innerLeft {
-    height: 75%;
-    width: 100%;
-    display: inline-block;
-    padding: 0px;
-    position: absolute;
-    bottom: 1%;
-    left: 0;
+  .myEmail{
+    font-size: 1.25em;
   }
-  #innerLeft span{
-    display: none;
+  .copyEmail>button{
+    height: 32px;
   }
-  #innerSns {
-    width: 100%;
-    height: 44%;
-    margin: 0px 0px;
+  .copyEmail>button:hover{
+    border:2px solid #343434;
   }
-  #innerFullpage {
-    width: 100%;
-    height: 55%;
-    margin: 0px 0px;
-    border-left: 0px solid #151515;
+  .resume{
+    margin-top:30px;
+    font-size: 1em;
   }
-  #snsContents,
-  #fullpageContents {
-    margin-top: 5px;
-  }
-  #snsContents span,
-  #fullpageContents span {
-    padding: 0px;
-    margin: 0px;
-    cursor: pointer;
-  }
-  #snsContents span:first-child,
-  #fullpageContents span:first-child {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #snsContents span:last-child,
-  #fullpageContents span:last-child {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #snsItemBox {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  #snsItem1,
-  #snsItem2 {
-    display: inline-block;
-    /* border:1px solid #151515; */
-    width: 250px;
-    height: 250px;
-    margin: 0px 20px;
-  }
-  #fullpageItemBox {
-    position: relative;
-    height: 100%;
-  }
-  #fullpageItemBox img {
-    position: absolute;
-    top: 0%;
-    height: 100%;;
+  .resume>a{
+    padding: 1px 10px;
   }
 }

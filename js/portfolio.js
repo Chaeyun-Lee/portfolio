@@ -131,9 +131,38 @@ function carousel() {
 }
 
 //Page01 toggle
-    $("#eduTitle").on("click", function () {
+$(function(){
+  $("#eduTitle").on("click", function () {
       $("#eduText").slideToggle(300, "linear");
     });
     $("#workTitle").on("click", function () {
       $("#workText").slideToggle(300, "linear");
     });
+})
+    
+
+//Page03 롤링배너
+let roller = document.querySelector(".rollingBanner");
+roller.id='roller1';
+
+let clone = roller.cloneNode(true);
+clone.id= 'roller2';
+document.querySelector('.wrapBox').appendChild(clone);
+
+roller.classList.add('original');
+clone.classList.add('clone');
+
+function copy() {
+  // 복사문구값 가져오기
+  var copyTxt = document.querySelector(".myEmail");
+
+  // 복사문구 선택
+  copyTxt.select();
+  copyTxt.setSelectionRange(0, 99999); // Mobile 대응
+
+   // 복사
+  navigator.clipboard.writeText(copyTxt.value);
+
+  // 복사완료에 대해 Alert으로 띄우기
+  alert("복사되었습니다.");
+}
