@@ -896,6 +896,22 @@ main {
     padding: 5px 0px;
   }
   /* --------------page02--------------- */
+ .title02{
+  font-size: 4em;
+ }
+ .skills{
+  font-size: 2em;
+ }
+ .skills:first-child{
+  text-align: right;
+ }
+ .skills:nth-child(2){
+  text-align: left;
+ }
+ .skills:nth-child(6){
+  grid-column-start: 1;
+  grid-column-end:3;
+ }
   /*---------------page03---------------*/
   #page03In {
     padding: 20px 30px;
@@ -904,12 +920,9 @@ main {
     position: relative;
     flex-direction: column;
   }
-  #page03In h1 {
+  .page03h1 {
     width: 100%;
     font-size: 3em;
-  }
-  #page03In h1 span {
-    padding: 0px 20px;
   }
   #page03Inner {
     display: inline-block;
