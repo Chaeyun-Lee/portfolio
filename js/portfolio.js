@@ -15,7 +15,7 @@ window.addEventListener('resize', function(){
 const headerMenu = document.querySelector("#mainPagebtn");
 const mainPage = document.querySelector("#page01");
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 750) {
+  if (window.scrollY > 700) {
     headerMenu.style.position = "fixed";
     headerMenu.style.top = "5%";
   } else if (window.scrollY <= 800) {
@@ -41,12 +41,13 @@ if (screenW.matches) {
       });
     },
     {
-      threshold: 0.5,
+      threshold: 0.3,
     }
   );
   obsever.observe(pages[0]);
   obsever.observe(pages[1]);
   obsever.observe(pages[2]);
+  obsever.observe(pages[3]);
 } else {
   const pages = document.querySelectorAll(".pages");
   const obsever = new IntersectionObserver(
@@ -71,8 +72,8 @@ if (screenW.matches) {
 const scrollDown = document.querySelector("#scrollDown");
 
 const typeAni = new TypeIt(scrollDown, { speed: 50, startDelay: 1000 })
-  .type("아래에 더욱 많은", { delay: 500 })
-  .pause(500)
+  .type("아래에 더욱 많은", { delay: 200 })
+  .pause(100)
   .type(" 내용들이 있어요!")
   .pause(500)
   .type("<br><span class='material-symbols-outlined'>arrow_downward</span> ")
@@ -87,13 +88,13 @@ $(window).scroll(function () {
   if (scrollNum <= 700) {
     $(".menuBtns:eq(0)").addClass("actives");
     $(".menuBtns:eq(0)").siblings().removeClass("actives");
-  } else if (scrollNum >= 700 && scrollNum < 1600) {
+  } else if (scrollNum >= 700 && scrollNum < 1400) {
     $(".menuBtns:eq(1)").addClass("actives");
     $(".menuBtns:eq(1)").siblings().removeClass("actives");
-  } else if (scrollNum >= 1600 && scrollNum < 2600) {
+  } else if (scrollNum >= 1400 && scrollNum < 2200) {
     $(".menuBtns:eq(2)").addClass("actives");
     $(".menuBtns:eq(2)").siblings().removeClass("actives");
-  } else if (scrollNum > 2600) {
+  } else if (scrollNum > 2200) {
     $(".menuBtns:eq(3)").addClass("actives");
     $(".menuBtns:eq(3)").siblings().removeClass("actives");
   }
@@ -112,23 +113,23 @@ $(function () {
   });
 });
 
-setInterval(carousel, 3000);
-let num = 0;
+// setInterval(carousel, 3000);
+// let num = 0;
 
-function carousel() {
-  const fullpageCoverItems = document.querySelectorAll(".fullpageItems");
+// function carousel() {
+//   const fullpageCoverItems = document.querySelectorAll(".fullpageItems");
 
-  for (let i = 0; i < fullpageCoverItems.length; i++) {
-    fullpageCoverItems[i].style.opacity = "0";
-  }
+//   for (let i = 0; i < fullpageCoverItems.length; i++) {
+//     fullpageCoverItems[i].style.opacity = "0";
+//   }
 
-  num++;
-  if (num > fullpageCoverItems.length) {
-    num = 1;
-  }
-  fullpageCoverItems[num - 1].style.opacity = "1";
-  console.log(num);
-}
+//   num++;
+//   if (num > fullpageCoverItems.length) {
+//     num = 1;
+//   }
+//   fullpageCoverItems[num - 1].style.opacity = "1";
+//   console.log(num);
+// }
 
 //Page01 toggle
 $(function(){

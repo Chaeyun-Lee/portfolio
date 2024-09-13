@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Noto+Sans+KR&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979..2050&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 * {
   margin: 0 auto;
   padding: 0;
@@ -38,42 +39,44 @@ header {
   width: 100vw;
   height: 100vh;
   position: relative;
-  /* background:url(../img/indexBackgroundNewVer.jpg) no-repeat;
-  background-size: cover; */
 }
 .middler{
   margin:3% auto;
-  width: 60vw;
-  height:60vh;
+  width: 70vw;
+  height:70vh;
   display:flex;
   flex: row nowrap;
   justify-content: center;
+  /* border:1px solid red; */
 }
 .photo {
   flex:1;
   border-radius:100px 100px 0 ;
+  box-shadow: 3px 3px 15px 5px #ececec;
 }
 .textBox{
   flex: 3;
   padding:12% 30px;
   width:20%;
   font-family: "Noto Sans KR", sans-serif;
-  line-height: 1.5em;
+  line-height: 1.25em;
   font-size:2.5em;
   font-weight: 400;
-  color:#454545;
+  color:#343434;
 }
 .textBox>p:nth-child(2){
   font-weight: 600;
 }
 .strong{
   font-weight: 600;
-  font-size: 1.25em;
+  font-size: 2.5em;
+  line-height:1.5em;
 }
 #scrollDown {
   text-align: center;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 24px;
+  color: #343434;
   position: absolute;
   bottom: 20%;
   left: 50%;
@@ -128,7 +131,7 @@ nav li:active,
 }
 /* header 끝 ///////// Main 시작 */
 main {
-  padding: 0px 5%;
+  padding: 0;
 }
 .pages {
   opacity: 0;
@@ -141,20 +144,23 @@ main {
   transition: all 1s;
 }
 #page01 {
-  padding: 10px 30px;
+  padding: 10px 5%;
 }
 #page01In {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 20px 40px;
-  height: 900px;
-  border: 1px solid #151515;
-  border-bottom: none;
-  border-radius: 100px 100px 0px 0px;
+  height: 100vh;
   color: #151515;
 }
-#page01In h1 {
-  font-size: 6em;
-  font-weight: 100;
+.page01h1 {
+  font-size: 8em;
+  line-height: 0.8em;
+}
+.page01h1 p{
+  display: inline-block;
+}
+.page01h1 p:first-child{
+  color:#cccccc;
 }
 #innerPage01 {
   display: flex;
@@ -163,6 +169,39 @@ main {
 #page01Left {
   width: 48%;
   height: 700px;
+}
+.bCard{
+  width:95%;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin:30px 0;
+}
+.cardFront{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding:0 10px;
+}
+.frontLeft{
+  width:30%;
+  padding-top:20px;
+  height: 100%;
+}
+.frontLeft img{
+ width:100%;
+}
+.frontRight{
+  width:65%;
+  padding:5% 3%;
+}
+.name{
+  font-size: 1.5em;
+  font-weight:600;
+  margin:20px 0;
+}
+.cardEmail{
+  font-size: 0.8em;
 }
 #imgWillHere {
   display: inline-block;
@@ -207,7 +246,7 @@ main {
   border-radius: 30px;
   padding: 0px 10px;
   border: 1px solid #151515;
-  margin: 5px 0px;
+  margin: 15px 0px;
 }
 #infoSkill::-webkit-scrollbar {
   width: 5px;
@@ -300,37 +339,112 @@ main {
   font-size: smaller;
 }
 /* Page01 끝 /////// Page02 시작 */
-#page02 {
-  padding: 10px 30px;
+#Page02{
+  padding:10px 5%;
+}
+.title02{
+  font-size:12em;
+  text-align:center;
+  font-family: "Climate Crisis", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style:normal;
+  overflow: hidden;
+  color:#ffffff;
+}
+.split > span{
+  display: inline-block;
 }
 #page02In {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 20px 40px;
-  height: 900px;
-  border: 1px solid #151515;
-  border-bottom: none;
-  border-radius: 100px 100px 0px 0px;
+  height: 100vh;
+  color: #151515;
+}
+#innerPage02{
+  display: grid;
+  grid-template-columns: 25% 35% 40%;
+  grid-template-rows: 150px 100px 150px;
+  gap:3px;
+}
+.skills{
+  color:#ffffff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align:center;
+  font-size: 4em;
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+.skills:hover{
+  font-family: "Climate Crisis";
+  font-variation-settings:
+    "YEAR" 2000;
+    font-style: normal;
+}
+.skills:first-child{
+  grid-column-start:2;
+  grid-column-end:4;
+}
+.skills:nth-child(2){
+  grid-column-start: 2;
+  grid-column-end:3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.skills:nth-child(3){
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start:3;
+  grid-column-end:4;
+}
+.skills:nth-child(5){
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.skills:nth-child(6){
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+/* Page02 끝 /////////////////////// Page03 시작*/
+#page03 {
+  padding: 10px 5%;
+}
+#page03In {
+  margin-top: 50px;
+  padding: 20px 40px;
+  height: min(100vh);
   color: #151515;
   position: relative;
   display: flex;
+  flex-flow: column nowrap;
 }
-#page02In h1 {
-  width: 27%;
+.page03h1{
+  width:100%;
   font-size: 6em;
   font-weight: 100;
-  display: inline-block;
+  text-align: center;
+  overflow: hidden;
 }
-#page02In h1 span {
+.page03h1 p{
+  display:inline-block;
+}
+.page03h1 span {
   border-radius: 100px;
   color: white;
   background-color: #151515;
-  padding: 0px 40px;
+  padding: 0px 30px;
 }
-#page02Inner {
+#page03Inner {
   display: inline-block;
-  width: 70%;
-  height: 600px;
+  width: 100%;
+  height: 500px;
   position: relative;
+  margin:20px 0;
+  flex:3;
 }
 #pjtList > ul {
   width: 100%;
@@ -376,7 +490,7 @@ main {
 }
 .pjtDetail {
   width: 100%;
-  height: 700px;
+  height: 600px;
   padding: 10px;
   border: 1px solid #151515;
   border-radius: 50px 0px;
@@ -396,11 +510,12 @@ main {
   overflow-x: hidden;
 }
 .webPjtPhoto::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 .webPjtPhoto::-webkit-scrollbar-thumb {
   border-radius: 25px;
   background-color: #151515ad;
+  cursor: pointer;
 }
 .webPjtPhoto::-webkit-scrollbar-track {
   border-radius: 25px;
@@ -425,7 +540,7 @@ main {
   font-family: "Noto Sans KR", sans-serif;
   width: 49%;
   height: auto;
-  padding: 10% 20px;
+  padding: 5% 20px;
   border-left: 2px solid #151515;
   font-size: medium;
   text-align: left;
@@ -477,36 +592,34 @@ main {
   border-bottom: 2px solid #343434;
   transition: 0.5s;
   margin: 0px 5px;
+  cursor:pointer;
 }
 .webPjtText button:hover {
   background-color: #343434;
   color: #ffffff;
   transition: 0.5s;
 }
-#page02IndexNum {
+#page03IndexNum {
   display: inline-block;
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 50px;
-  font-size: 24em;
+  padding: 0px 30px;
+  font-size: 18em;
   color:transparent;
   -webkit-text-stroke: #343434 2px;
 }
-/* Page02 끝  /////////// Page03 시작 */
-#page03 {
-  padding: 10px 30px;
+/* Page03 끝  /////////// Page04 시작 */
+#page04 {
+  padding: 10px 0px;
 }
-#page03In {
+#page04In {
   margin-top: 100px;
-  padding: 40px 40px;
-  height: 900px;
-  border: 1px solid #151515;
-  border-bottom: none;
-  border-radius: 100px 100px 0px 0px;
+  padding: 40px 0px;
+  height: max-content;
   color: #151515;
 }
-#page03In h1 {
+#page04In h1 {
   font-size: 7em;
   font-weight: 100;
   display: inline-block;
@@ -523,10 +636,10 @@ main {
   flex-shrink: 0;
 }
 .rollingList{
-  font-size: 8em;
+  font-size: 9em;
   width: fit-content;
   margin: 0 30px;
-  color:#343434;
+  color:#cccccc;
 }
 @keyframes rolling1 {
 	0% { transform: translateX(0); }
@@ -545,13 +658,13 @@ main {
 .rollingBanner.clone {
 	animation: rolling2 30s linear infinite;
 }
-.innerPage03{
+.innerPage04{
   padding:30px;
   text-align: center;
   color:#454545;
   font-family: "Noto Sans KR", sans-serif;
 }
-.innerPage03 span{
+.innerPage04 span{
   font-size: 2em;
 }
 .email>p{
@@ -568,43 +681,45 @@ main {
   position:relative;
 }
 .myEmail{
-  font-size: 2.5em;
+  font-size: 5.5em;
+  font-family: "Playfair Display", system-ui;
   text-align: center;
   display: inline-block;
-  border: 1px solid #343434;
+  border: none;
+  border-bottom: 1px solid #343434;
   padding: 3px 0px;
-  border-radius: 30px;
   color:#343434;
 }
 .copyEmail>button{
   width:100%;
-  height: 55px;
-  border-radius: 30px;
-  background: transparent;
+  height: 100%;
+  background:transparent;
   outline: none;
   border:none;
   position:absolute;
   left:0;
   top:0;
   cursor: pointer;
+
 }
-.copyEmail>button:hover{
-  border:3px solid #343434;
+.copyEmail>button:hover, .copyEmail>button:focus {
+  border-bottom:3px solid #343434;
 }
 .resume{
   margin-top:30px;
-  font-size: 1.25em;
 }
-.resume>a{
+.resume a{
   display: inline-block;
   border: 1px solid #343434;
-  padding: 3px 20px;
-  margin: 5px 0px;
+  padding: 3px 15px;
+  margin: 5px 10px;
   border-radius: 30px;
   color:#343434;
   transition: all 0.5s ease;
+  font-family: "Playfair Display", system-ui;
+  font-weight: 600;
 }
-.resume>a:hover{
+.resume a:hover{
   background-color: #343434;
   color:#ebebeb;
 }
@@ -613,15 +728,13 @@ main {
     width: 100vw;
     height: 100vh;
     position: relative;
-    /* background:url(../img/indexBackgroundMobile.jpg) no-repeat;
-    background-size: cover; */
     box-shadow: 0px 0px 50px 1px #ebebeb;
   }
   .middler{
     margin:0 auto;
     padding:5% 0;
     width: 100vw;
-    height:100vh;
+    height:85vh;
     display:flex;
     flex-flow: column nowrap;
   }
@@ -680,8 +793,8 @@ main {
     min-height: 100vh;
     height: fit-content;
   }
-  #page01In h1 {
-    font-size: 3em;
+  .page01h1{
+    font-size: 6em;
   }
   #innerPage01 {
     display: flex;
@@ -783,25 +896,29 @@ main {
     padding: 5px 0px;
   }
   /* --------------page02--------------- */
-  #page02In {
+  /*---------------page03---------------*/
+  #page03In {
     padding: 20px 30px;
     min-height: 100vh;
     height: fit-content;
     position: relative;
     flex-direction: column;
   }
-  #page02In h1 {
+  #page03In h1 {
     width: 100%;
     font-size: 3em;
   }
-  #page02In h1 span {
+  #page03In h1 span {
     padding: 0px 20px;
   }
-  #page02Inner {
+  #page03Inner {
     display: inline-block;
     width: 100%;
     height: fit-content;
     position: relative;
+  }
+  .bCard{
+    height: fit-content;
   }
   #pjtList > ul > li {
     font-size: 2em;
@@ -809,12 +926,12 @@ main {
   #pjtList > ul > li > span {
     font-size: xx-large;
   }
-  #page02IndexNum {
-    top: 0;
+  #page03IndexNum {
+    bottom: 10%;
     right: 10%;
     padding: 0px;
     height: min-content;
-    font-size: 7em;
+    font-size: 9em;
   }
   .pjtDetail {
     height: 65vh;
@@ -905,39 +1022,35 @@ main {
     width: 100%;
     text-align: right;
   }
-  /* ---------------page 03--------------- */
-  #page03In {
+  /* ---------------page 04--------------- */
+  #page04In {
     padding: 20px 30px;
-    min-height: 80vh;
     height: fit-content;
-  }
-  #page03In h1 {
-    font-size:3.5em;
-    background-color: aqua;
+    min-height: 90vh;
   }
   .rollingList{
-    font-size: 4em;
+    font-size: 8em;
   }
-  .innerPage03 span{
+  .innerPage04 span{
     font-size: 1em;
   }
   .email>p{
-    font-size: 1.18em;
+    font-size: 1em;
   }
   .myEmail{
-    font-size: 1.25em;
+    font-size: 2em;
   }
   .copyEmail>button{
-    height: 32px;
+    height: 100%;
   }
   .copyEmail>button:hover{
-    border:2px solid #343434;
+    border-bottom:2px solid #343434;
   }
   .resume{
     margin-top:30px;
-    font-size: 1em;
+    font-size: 0.8em;
   }
-  .resume>a{
+  .resume a{
     padding: 1px 10px;
   }
 }
