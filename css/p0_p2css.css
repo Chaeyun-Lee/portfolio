@@ -896,7 +896,7 @@ main {
   }
   /* --------------page02--------------- */
  .title02{
-  font-size: 3.5em;
+  font-size: 3.7em;
  }
  .skills{
   font-size: 1.5em;
@@ -921,7 +921,11 @@ main {
   }
   .page03h1 {
     width: 100%;
-    font-size: 2em;
+    font-size: 3em;
+  }
+  .page03h1 > p{
+    display: block;
+    text-align: left;
   }
   #page03Inner {
     display: inline-block;
