@@ -39,19 +39,20 @@ gsap.utils.toArray(".textGsap").forEach((item)=>{
         }
     });
 })
+
 const page02Ani = gsap.timeline();
-page02Ani.from(".title02 span:first-child",{autoAlpha:1,duration:1, y:200},"+=0.3")
-page02Ani.from(".title02 span:nth-child(2)",{autoAlpha:1,duration:1, y:200},"+=0.3")
-page02Ani.from(".title02 span:nth-child(3)",{autoAlpha:1,duration:1, y:200},"+=0.3")
-page02Ani.from(".title02 span:nth-child(4)",{autoAlpha:1,duration:1, y:200},"+=0.3")
-page02Ani.from(".title02 span:nth-child(5)",{autoAlpha:1,duration:1, y:200},"+=0.3")
-page02Ani.from(".title02 span:nth-child(6)",{autoAlpha:1,duration:1, y:200},"+=0.3")
+page02Ani.from(".title02 span:first-child",{autoAlpha:1,duration:1,y:200},"+=0.2")
+page02Ani.from(".title02 span:nth-child(2)",{autoAlpha:1,duration:1,y:200},"+=0.2")
+page02Ani.from(".title02 span:nth-child(3)",{autoAlpha:1,duration:1,y:200},"+=0.2")
+page02Ani.from(".title02 span:nth-child(4)",{autoAlpha:1,duration:1,y:200},"+=0.2")
+page02Ani.from(".title02 span:nth-child(5)",{autoAlpha:1,duration:1,y:200},"+=0.2")
+page02Ani.from(".title02 span:nth-child(6)",{autoAlpha:0,duration:1,y:500},"+=0.2")
 
 ScrollTrigger.create({
     animation:page02Ani,
     trigger:'.title02',
-    start:"top 50%",
-    end:"bottom 80%",
+    start:"top 20%",
+    end:"90% 40%",
     markers:true,
     scrub:3,
 });
@@ -101,8 +102,7 @@ ScrollTrigger.create({
     animation:page02Ani2,
     trigger:"#page02In",
     start:"10% 30%",
-    end:"50% 45%",
-    scrub:6,
-    markers:true,
+    end:"40% 40%",
+    scrub:3,
     delay:3,
 })

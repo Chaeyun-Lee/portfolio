@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Noto+Sans+KR&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979..2050&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@font-face {
+  font-family: "kicaBold";
+  src: url(../font/ifkica-bold.ttf);
+}
 * {
   margin: 0 auto;
   padding: 0;
@@ -342,11 +346,11 @@ main {
   padding:10px 5%;
 }
 .title02{
+  display: block;
   font-size:12em;
   text-align:center;
-  font-family: "Climate Crisis", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 400;
+  font-family: "kicaBold";
+  line-height: 1em;
   font-style:normal;
   overflow: hidden;
   color:#ffffff;
@@ -379,11 +383,8 @@ main {
   font-style: italic;
 }
 .skills:hover{
-  font-family: "Climate Crisis";
-  font-variation-settings:
-    "YEAR" 2000;
-    font-style: normal;
-}
+  font-family: "kicaBold";
+  }
 .skills:first-child{
   grid-column-start:2;
   grid-column-end:4;
@@ -896,7 +897,7 @@ main {
   }
   /* --------------page02--------------- */
  .title02{
-  font-size: 3.7em;
+  font-size: 3.5em;
  }
  .skills{
   font-size: 1.5em;
