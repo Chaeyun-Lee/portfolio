@@ -35,7 +35,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-header {
+header{
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -896,10 +896,10 @@ main {
   }
   /* --------------page02--------------- */
  .title02{
-  font-size: 3em;
+  font-size: 3.5em;
  }
  .skills{
-  font-size: 1.25em;
+  font-size: 1.5em;
  }
  .skills:first-child{
   text-align: right;
