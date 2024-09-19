@@ -742,9 +742,13 @@ main {
     width: 50vw;
   }
   .textBox{
-    padding:5% 30px;
+    padding:2% 20px;
     width:100%;
-    font-size:1.8em;
+    font-size:1.5em;
+
+  }
+  .textBox>p:first-child{
+    font-size: 0.8em;
   }
   #scrollDown {
     display: none;
@@ -922,7 +926,7 @@ main {
   }
   .page03h1 {
     width: 100%;
-    font-size: 3em;
+    font-size: 2.5em;
   }
   #page03Inner {
     display: inline-block;
@@ -1051,7 +1055,8 @@ main {
     font-size: 1em;
   }
   .myEmail{
-    font-size: 2em;
+    font-size: 1.5em;
+    text-align: center;
   }
   .copyEmail>button{
     height: 100%;

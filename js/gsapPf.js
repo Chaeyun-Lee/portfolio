@@ -50,10 +50,11 @@ page02Ani.from(".title02 span:nth-child(6)",{autoAlpha:1,duration:1, y:200},"+=0
 ScrollTrigger.create({
     animation:page02Ani,
     trigger:'.title02',
-    start:"-40% 40%",
-    end:"bottom 60%",
+    start:"top 50%",
+    end:"bottom 80%",
+    markers:true,
     scrub:3,
-})
+});
 
 const page03Ani = gsap.timeline();
 page03Ani.from(".page03h1 p:first-child",{autoAlpha:1, duration:1, y:-200},"+=0.2")
@@ -75,7 +76,6 @@ gsap.utils.toArray(".pageBg").forEach((item)=>{
         trigger:item,
         start:"top 20%",
         end:"bottom 15%",
-        markers:true,
         onEnter:()=>
             gsap.to("body",{
                 backgroundColor:color,
