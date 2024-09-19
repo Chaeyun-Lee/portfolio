@@ -47,7 +47,6 @@ header {
   display:flex;
   flex: row nowrap;
   justify-content: center;
-  /* border:1px solid red; */
 }
 .photo {
   flex:1;
@@ -881,10 +880,6 @@ main {
   #infoSkill ul:nth-of-type(3) {
     display: none;
   }
-  /*스크롤바 숨김*/
-  #infoSkill::-webkit-scrollbar {
-    width: 0px;
-  }
   #page01Right {
     display: inline-block;
     width: 100%;
@@ -901,10 +896,10 @@ main {
   }
   /* --------------page02--------------- */
  .title02{
-  font-size: 4em;
+  font-size: 3em;
  }
  .skills{
-  font-size: 2em;
+  font-size: 1.25em;
  }
  .skills:first-child{
   text-align: right;
@@ -926,7 +921,7 @@ main {
   }
   .page03h1 {
     width: 100%;
-    font-size: 2.5em;
+    font-size: 2em;
   }
   #page03Inner {
     display: inline-block;
